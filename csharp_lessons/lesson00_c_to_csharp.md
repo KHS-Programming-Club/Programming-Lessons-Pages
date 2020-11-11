@@ -1,4 +1,4 @@
-# Lesson 3: Introduction to C#
+# Week 2: Introduction to C#
 In this lesson, we will be switching programming languages and start C#. This will be the language that we stick with for the rest of the year.
 
 ## Math and Comments
