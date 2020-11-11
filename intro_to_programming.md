@@ -3,7 +3,6 @@ Programming Club Notes - C
 
 ## Brief Introduction to Programming
 
-
 Composed of a collection of statements
 - Statements are executed from top to bottom
 - Branches - Decides between two or more sets of operations based on a condition

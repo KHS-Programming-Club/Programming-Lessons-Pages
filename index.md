@@ -1,10 +1,12 @@
 # Welcome to Programming Club
 
-This site is work in progress, please stand by
+Below is a list of pages on the site; more will be added shortly
 
-* [Intro to Programming](intro_to_programming.md)
-* C# Lessons
-  * [Lesson 0: C to C#](csharplessons/lesson00_c_to_csharp.md)
-* Reference
-  * [C Printf](printf_info.md)
-  * [Methods Reference](methods_reference.md)
+[Intro to Programming](intro_to_programming.md)
+
+### Lessons
+* [Lesson 0: C to C#](csharp_lessons/lesson00_c_to_csharp.md)
+
+### Reference
+* [C Printf](printf_info.md)
+* [Methods Reference](methods_reference.md)

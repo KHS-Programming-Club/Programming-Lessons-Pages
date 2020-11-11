@@ -48,7 +48,7 @@ A few other ones you may find useful:
 `.number` is used to indicate the precision of the result. For integers (d, i, o, u, x, X) this is the minimum number of digits to be written. If the value written is shorter than the number of digits, zeros will be added to the begnning. For e, E, and f this is the number of decimal places to round to.
 
 ```c
-prnttf("Exmaple %.3d\n", 44); // Prints: Example 044
+printf("Exmaple %.3d\n", 44); // Prints: Example 044
 printf("Example %.3f\n", 4.55555); // Prints: Example 4.556
 ```
 
