@@ -14,7 +14,7 @@ Below is a list of pages on the site; more will be added shortly
 * Week 5: Arrays and Loops
 * Week 6: Methods
 * Week 7: Classes
-* ...
+* Week 8: Wrapping Up
 
 #### Advanced
 *note that at this point most people are far enough along to begin working on a game or other project*
