@@ -9,7 +9,7 @@ Below is a list of pages on the site; more will be added shortly
 
 ### C# Lessons
 * [Week 2: C to C#](csharp_lessons/lesson00_c_to_csharp.md)
-* Week 3: Strings
+* [Week 3: Strings](csharp_lessons/lesson01_strings.md)
 * Week 4: Conditionals
 * Week 5: Arrays and Loops
 * Week 6: Methods
