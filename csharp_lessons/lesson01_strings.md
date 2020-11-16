@@ -70,7 +70,7 @@ class Program {
 
 ## More Operators
 
-[^ Back to Top ^](#table-of-contents)
+[ ^ Back to Top ^ ](#table-of-contents)
 
 **Increment and Decrement**
 
@@ -181,7 +181,7 @@ System.Console.WriteLine($"{name} will be {age} in {days} days. This is equal to
 
 ## StringBuilder Class
 
-[^ Back to Top ^](#table-of-contents)
+[ ^ Back to Top ^ ](#table-of-contents)
 
 In C#, strings are stored as an immutable object. This means that there is no way to actually change the object, only to create a new object based on that original object. This takes up a significant amount of time in memory, so if there’s ever a case in which many different changes will need to be made, it can be quite taxing. In this case, we will use the StringBuilder class. This class also has methods which give extra functionality to string manipulation. The syntax to create one of these is `System.Text.StringBuilder variableName = new System.Text.StringBuilder();`. You can also put a string in the parentheses to give the string an initial value. The value of the string is retrieved by doing `variableName.ToString()`. You can use the methods by typing `variableName.methodName(value(s));`
 
