@@ -27,7 +27,7 @@ The `if` statement is among the most important and universal parts of programmin
 
 Let's take a look at an example if statement, then break down how it works:
 
-```
+```csharp
 bool condition = true;
 
 if (condition) {
@@ -35,9 +35,59 @@ if (condition) {
 }
 ```
 
+1. `bool condition = true` - a variable of type boolean is delcared and set to true
+2. `if (condition) {` - here's where the new stuff starts to come in; 
+   1. the `if` keyword signified this is an if statement
+   2. inside parenthesis is the condition statement (in this case it's a variable called condition); this tells the computer the *condition* under which the code will execute (ie. if the boolean is true it will and if it's false it won't)
+3. `{ ... }` - these curly braces contain the code that will run if the *condition* is true; in this case it writes "Apparently conditon is true" to the console
+
+In plain English an if statement like this would sound like: "If this is correct, then say 'Apparently condition is true'"; or, more generally, "if this then do that".
+
 ### Else
 
+We can extend this concept of "if this then do that" to add "if this then do that, otherwise do this". In programming we use `else`, but otherwise this is very similar. An example `if-else` statement looks like this:
+
+```csharp
+bool condition = false;
+
+if (condition) {
+  Console.WriteLine("Apparently condition is true");
+} else {
+  Console.WriteLine("Apparently condition is false");
+}
+```
+
+In this example we've added an additional section that will run if the condition is false. In this case it is and the program would output: "Apparently condition is false".
+
 ### Else-If
+
+This can be further extended...
+
+```csharp
+bool condition = false;
+bool other_condition = true;
+
+if (condition) {
+  Console.WriteLine("Apparently condition is true");
+} else if (other_condition) {
+  Console.WriteLine("Apparently condition is false, but other condition is true");
+}
+```
+
+We can also add an `else` statement onto the end:
+
+```csharp
+bool condition = false;
+bool other_condition = true;
+
+if (condition) {
+  Console.WriteLine("Apparently condition is true");
+} else if (other_condition) {
+  Console.WriteLine("Apparently condition is false, but other condition is true");
+} else {
+  Console.WriteLine("Apparently both conditions are false");
+}
+```
 
 ## Boolean Operators
 
