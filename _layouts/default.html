@@ -50,8 +50,8 @@
     {% endif %}
     
     <script>
-      let title = '{{'Programming Club | ' + site.title.split(': ')[0].replace('KHS Programming Club')}}';
-      document.title = title;
+      let title = '{{'Programming Club | ' + (site.title.split(': ')[1] || site.title.split(': ')[0]).replace('KHS Programming Club')}}';
+      document.title = title;//
     </script>
   </body>
 </html>
