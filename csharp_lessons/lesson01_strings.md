@@ -1,7 +1,7 @@
 # Week 3: Console Input and More Operators
 In this lesson we are going to be learning how to receive input from the console and some more operators to manipulate data. This means that this will be the first lesson in which we are able to make dynamic programs, that is, programs that's output is contingent on the action of the user.
 
-**Table of Contents**
+### Table of Contents
 * [Reading Console Input](#reading-console-input)
 * [More Operators](#more-operators)
 * [StringBuilder Class](#stringbuilder-class)
@@ -12,7 +12,7 @@ We will be learning many new methods in this section so it would be prudent to g
 
 ## Reading Console Input
 
-[^ Back to Top ^](#week-3-console-input-and-more-operators)
+[^ Back to Top ^](#table-of-contents)
 
 There are three methods with which one may receive input from the console
 
@@ -70,7 +70,7 @@ class Program {
 
 ## More Operators
 
-[^ Back to Top ^](#week-3-console-input-and-more-operators)
+[^ Back to Top ^](#table-of-contents)
 
 **Increment and Decrement**
 
@@ -181,7 +181,7 @@ System.Console.WriteLine($"{name} will be {age} in {days} days. This is equal to
 
 ## StringBuilder Class
 
-[^ Back to Top ^](#week-3-console-input-and-more-operators)
+[^ Back to Top ^](#table-of-contents)
 
 In C#, strings are stored as an immutable object. This means that there is no way to actually change the object, only to create a new object based on that original object. This takes up a significant amount of time in memory, so if there’s ever a case in which many different changes will need to be made, it can be quite taxing. In this case, we will use the StringBuilder class. This class also has methods which give extra functionality to string manipulation. The syntax to create one of these is `System.Text.StringBuilder variableName = new System.Text.StringBuilder();`. You can also put a string in the parentheses to give the string an initial value. The value of the string is retrieved by doing `variableName.ToString()`. You can use the methods by typing `variableName.methodName(value(s));`
 
