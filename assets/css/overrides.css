@@ -1,3 +1,7 @@
 #a-title h1::before {
   opacity: 0;
 }
+
+code {
+  color: #FFF!important;
+}
