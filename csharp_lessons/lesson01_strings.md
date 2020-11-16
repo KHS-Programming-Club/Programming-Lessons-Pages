@@ -18,7 +18,7 @@ There are three methods with which one may receive input from the console.
 
 **System.Console.Read**
 
-This is the most basic, though least used way of getting input from the console. This method returns an integer which is equal to the unicode for the character of the key you pressed. A table of all the possible values can be seen [here](http://www.personal.psu.edu/jxm22/unicode/). (What is pressed can be seen in the column without a label and the returned result in the column labelled `#`). This can be converted into a more readable format through casting it to a character.
+This is the most basic, though least used way of getting input from the console. This method returns an integer which is equal to the unicode for the character of the key you pressed. A table of all the possible values can be seen <a href="http://www.personal.psu.edu/jxm22/unicode/" target="_blank">here</a>. (What is pressed can be seen in the column without a label and the returned result in the column labelled `#`). This can be converted into a more readable format through casting it to a character.
 
 ```cs
 using System;
@@ -52,7 +52,7 @@ class Program {
 
 **System.Console.ReadKey**
 
-This method is used to await a key press and return an object with information about this key and press event. The most important of these is the Key property which is accessed with `System.Console.ReadKey().Key` and returns a value from `System.ConsoleKey`. When printed to the console, it appears as the name of the key. Keys from this enumeration (a term we will explore in a later lesson) can be directly accessed with the key’s name and the dot operator. For example, `System.ConsoleKey.A` represents the A key and `System.ConsoleKey.Enter` represents the enter key. A list of all of the different keys can be viewed from [here](https://docs.microsoft.com/en-us/dotnet/api/system.consolekey?view=net-5.0). This will become applicable once we learn more C#, but at the moment, values can be viewed through in console output by their names. The object of ReadKey can be put in a variable through the `System.ConsoleKeyInfo` type. It may also be worth noting that this is very important for those interested in game development as getting key input on the window in Unity follows the same structure.
+This method is used to await a key press and return an object with information about this key and press event. The most important of these is the Key property which is accessed with `System.Console.ReadKey().Key` and returns a value from `System.ConsoleKey`. When printed to the console, it appears as the name of the key. Keys from this enumeration (a term we will explore in a later lesson) can be directly accessed with the key’s name and the dot operator. For example, `System.ConsoleKey.A` represents the A key and `System.ConsoleKey.Enter` represents the enter key. A list of all of the different keys can be viewed from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.consolekey?view=net-5.0" target="_blank">here</a>. This will become applicable once we learn more C#, but at the moment, values can be viewed through in console output by their names. The object of ReadKey can be put in a variable through the `System.ConsoleKeyInfo` type. It may also be worth noting that this is very important for those interested in game development as getting key input on the window in Unity follows the same structure.
 
 ```cs
 using System;
