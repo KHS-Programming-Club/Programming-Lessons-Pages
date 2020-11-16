@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/overrides.css" />
     <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
 {% seo %}
-    <title>{{'Programming Club | ' + site.title.split(': ')[0].split('KHS Programming Club').join('')}}</title>
   </head>
 
   <body>
@@ -49,5 +48,10 @@
         ga('send', 'pageview');
       </script>
     {% endif %}
+    
+    <script>
+      let title = '{{'Programming Club | ' + site.title.split(': ')[0].replace('KHS Programming Club')}}';
+      document.title = title;
+    </script>
   </body>
 </html>
