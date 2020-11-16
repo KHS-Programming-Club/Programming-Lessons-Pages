@@ -1,0 +1,5 @@
+@import "{{ site.theme }}";
+
+#a-title h1::before {
+  opacity: 0;
+}
