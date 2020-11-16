@@ -1,4 +1,4 @@
-# Lesson 4: Console Input and More Operators
+# Week 3: Console Input and More Operators
 In this lesson we are going to be learning how to receive input from the console and some more operators to manipulate data. This means that this will be the first lesson in which we are able to make dynamic programs, that is, programs that's output is contingent on the action of the user.
 
 **What is a method?**
