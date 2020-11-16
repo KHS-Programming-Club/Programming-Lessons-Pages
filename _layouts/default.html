@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/css/overrides.css" />
     <link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
 {% seo %}
+    <title>{{'Programming Club | ' + site.title.split(': ')[0].split('KHS Programming Club').join('')}}</title>
   </head>
 
   <body>
@@ -37,7 +38,7 @@
         {{ content }}
       </section>
     </div>
-
+    
     {% if site.google_analytics %}
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
