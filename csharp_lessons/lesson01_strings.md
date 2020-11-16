@@ -1,6 +1,8 @@
 # Week 3: Console Input and More Operators
 In this lesson we are going to be learning how to receive input from the console and some more operators to manipulate data. This means that this will be the first lesson in which we are able to make dynamic programs, that is, programs that's output is contingent on the action of the user.
 
+<script>alert('test');</script>
+
 ### Table of Contents
 * [Reading Console Input](#reading-console-input)
 * [More Operators](#more-operators)
@@ -12,13 +14,13 @@ We will be learning many new methods in this section so it would be prudent to g
 
 ## Reading Console Input
 
-[^ Back to Top ^](#table-of-contents)
+[ ^ Back to Top ^ ](#table-of-contents)
 
-There are three methods with which one may receive input from the console
+There are three methods with which one may receive input from the console.
 
 **System.Console.Read**
 
-This is the most basic, though least used way of getting input from the console. This method returns an integer which is equal to the unicode for the character of the key you pressed. A table of all the possible values can be seen [here](http://www.personal.psu.edu/jxm22/unicode/). (What is pressed can be seen in the column without a label and the returned result in the column labelled `#`). This can be converted into a more readable format through casting it to a character.
+This is the most basic, though least used way of getting input from the console. This method returns an integer which is equal to the unicode for the character of the key you pressed. A table of all the possible values can be seen <a href="http://www.personal.psu.edu/jxm22/unicode/" target="_blank">here</a>. (What is pressed can be seen in the column without a label and the returned result in the column labelled `#`). This can be converted into a more readable format through casting it to a character.
 
 ```cs
 using System;
@@ -52,7 +54,7 @@ class Program {
 
 **System.Console.ReadKey**
 
-This method is used to await a key press and return an object with information about this key and press event. The most important of these is the Key property which is accessed with `System.Console.ReadKey().Key` and returns a value from `System.ConsoleKey`. When printed to the console, it appears as the name of the key. Keys from this enumeration (a term we will explore in a later lesson) can be directly accessed with the key’s name and the dot operator. For example, `System.ConsoleKey.A` represents the A key and `System.ConsoleKey.Enter` represents the enter key. A list of all of the different keys can be viewed from [here](https://docs.microsoft.com/en-us/dotnet/api/system.consolekey?view=net-5.0). This will become applicable once we learn more C#, but at the moment, values can be viewed through in console output by their names. The object of ReadKey can be put in a variable through the `System.ConsoleKeyInfo` type. It may also be worth noting that this is very important for those interested in game development as getting key input on the window in Unity follows the same structure.
+This method is used to await a key press and return an object with information about this key and press event. The most important of these is the Key property which is accessed with `System.Console.ReadKey().Key` and returns a value from `System.ConsoleKey`. When printed to the console, it appears as the name of the key. Keys from this enumeration (a term we will explore in a later lesson) can be directly accessed with the key’s name and the dot operator. For example, `System.ConsoleKey.A` represents the A key and `System.ConsoleKey.Enter` represents the enter key. A list of all of the different keys can be viewed from <a href="https://docs.microsoft.com/en-us/dotnet/api/system.consolekey?view=net-5.0" target="_blank">here</a>. This will become applicable once we learn more C#, but at the moment, values can be viewed through in console output by their names. The object of ReadKey can be put in a variable through the `System.ConsoleKeyInfo` type. It may also be worth noting that this is very important for those interested in game development as getting key input on the window in Unity follows the same structure.
 
 ```cs
 using System;
@@ -70,7 +72,7 @@ class Program {
 
 ## More Operators
 
-[^ Back to Top ^](#table-of-contents)
+[ ^ Back to Top ^ ](#table-of-contents)
 
 **Increment and Decrement**
 
@@ -181,7 +183,7 @@ System.Console.WriteLine($"{name} will be {age} in {days} days. This is equal to
 
 ## StringBuilder Class
 
-[^ Back to Top ^](#table-of-contents)
+[ ^ Back to Top ^ ](#table-of-contents)
 
 In C#, strings are stored as an immutable object. This means that there is no way to actually change the object, only to create a new object based on that original object. This takes up a significant amount of time in memory, so if there’s ever a case in which many different changes will need to be made, it can be quite taxing. In this case, we will use the StringBuilder class. This class also has methods which give extra functionality to string manipulation. The syntax to create one of these is `System.Text.StringBuilder variableName = new System.Text.StringBuilder();`. You can also put a string in the parentheses to give the string an initial value. The value of the string is retrieved by doing `variableName.ToString()`. You can use the methods by typing `variableName.methodName(value(s));`
 
