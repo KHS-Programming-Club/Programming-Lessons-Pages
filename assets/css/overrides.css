@@ -5,3 +5,7 @@
 code {
   color: #FFF!important;
 }
+
+thead {
+  text-align: center;
+}
