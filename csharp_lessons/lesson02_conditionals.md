@@ -1,4 +1,4 @@
-<div style="font-size:200rem;">DON'T USE PYTHON</div>
+# DON'T USE PYTHON
 
 # Week 4: Conditionals <!-- omit in toc -->
 
