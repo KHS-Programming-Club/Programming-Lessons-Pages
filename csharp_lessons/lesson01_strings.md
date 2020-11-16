@@ -1,6 +1,11 @@
 # Week 3: Console Input and More Operators
 In this lesson we are going to be learning how to receive input from the console and some more operators to manipulate data. This means that this will be the first lesson in which we are able to make dynamic programs, that is, programs that's output is contingent on the action of the user.
 
+**Table of Contents**
+* [Reading Console Input](#reading-console-input)
+* [More Operators](#more-operators)
+* [StringBuilder Class](#stringbuilder-class)
+
 **What is a method?**
 
 We will be learning many new methods in this section so it would be prudent to go over what a method actually is. A method is a block of reusable code. This code may take in a set of particular inputs and return an output, typically based on the input. Methods are connected to a particular object and perform a task based on that object. A language contains various built-in methods to perform core functionality. Among these are the console output and conversion methods we learned last week.
