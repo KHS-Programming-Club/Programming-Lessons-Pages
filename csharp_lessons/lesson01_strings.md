@@ -11,6 +11,7 @@ In this lesson we are going to be learning how to receive input from the console
 We will be learning many new methods in this section so it would be prudent to go over what a method actually is. A method is a block of reusable code. This code may take in a set of particular inputs and return an output, typically based on the input. Methods are connected to a particular object and perform a task based on that object. A language contains various built-in methods to perform core functionality. Among these are the console output and conversion methods we learned last week.
 
 ## Reading Console Input
+
 [^ Back to Top ^](#week-3-console-input-and-more-operators)
 
 There are three methods with which one may receive input from the console
@@ -68,6 +69,7 @@ class Program {
 ```
 
 ## More Operators
+
 [^ Back to Top ^](#week-3-console-input-and-more-operators)
 
 **Increment and Decrement**
@@ -178,6 +180,7 @@ System.Console.WriteLine($"{name} will be {age} in {days} days. This is equal to
 ```
 
 ## StringBuilder Class
+
 [^ Back to Top ^](#week-3-console-input-and-more-operators)
 
 In C#, strings are stored as an immutable object. This means that there is no way to actually change the object, only to create a new object based on that original object. This takes up a significant amount of time in memory, so if there’s ever a case in which many different changes will need to be made, it can be quite taxing. In this case, we will use the StringBuilder class. This class also has methods which give extra functionality to string manipulation. The syntax to create one of these is `System.Text.StringBuilder variableName = new System.Text.StringBuilder();`. You can also put a string in the parentheses to give the string an initial value. The value of the string is retrieved by doing `variableName.ToString()`. You can use the methods by typing `variableName.methodName(value(s));`
