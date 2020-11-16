@@ -6,6 +6,6 @@ code {
   color: #FFF!important;
 }
 
-thead {
-  text-align: center;
+thead, tr, th {
+  text-align: center!important;
 }
