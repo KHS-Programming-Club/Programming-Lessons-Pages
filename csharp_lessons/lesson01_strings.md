@@ -14,7 +14,7 @@ We will be learning many new methods in this section so it would be prudent to g
 
 [^ Back to Top ^](#table-of-contents)
 
-There are three methods with which one may receive input from the console
+There are three methods with which one may receive input from the console. [Test](#table-of-contents)
 
 **System.Console.Read**
 
