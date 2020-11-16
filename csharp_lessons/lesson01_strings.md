@@ -12,7 +12,7 @@ We will be learning many new methods in this section so it would be prudent to g
 
 ## Reading Console Input
 
-[Back to Top](#table-of-contents)
+[\^ Back to Top \^](#table-of-contents)
 
 There are three methods with which one may receive input from the console.
 
