@@ -119,16 +119,16 @@ if(condition) {
 } else {
   doOtherThing();
 }
-```cs
+```
 it's common to just do
 ```cs
 if(condition)
   doThing();
 else
   doOtherThing();
-```cs
-though again, you can only do so if there's only one statement in the block, so this for example would NOT work as intended
 ```
+though again, you can only do so if there's only one statement in the block, so this for example would NOT work as intended
+```cs
 if(condition)
   doThing1();
   doThing2(); // This is intended to only call doThing2 if condition is true, but since when there's no curly-braces, a block can only have one statement, the compiler reads it as seperate from the if-statement, and runs it regardless of condition.
