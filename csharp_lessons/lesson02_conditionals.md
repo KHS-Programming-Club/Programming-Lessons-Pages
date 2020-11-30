@@ -91,7 +91,7 @@ if (condition) {
 
 There are a number of **boolean operators** which are used to perform evaluations. These operators include:
 * <span style="background-color:black;padding:2px;">value1 <span style="color:red;">==</span> value2</span> - Returns true if value1 is equal to value2, otherwise returns false
-* <span style="background-color:black;padding:2px;"><span style="color:red;">value1 <span style="color:red;">!=</span> value2</span> - Returns false if value1 is equal to value2, otherwise returns true, opposite of `==`
+* <span style="background-color:black;padding:2px;">value1 <span style="color:red;">!=</span> value2</span> - Returns false if value1 is equal to value2, otherwise returns true, opposite of `==`
 * <span style="background-color:black;padding:2px;"><span style="color:red;">!</span>value</span> - Returns true if `value` is false and vice versa
 * <span style="background-color:black;padding:2px;">value1 <span style="color:red;">&&</span> value2</span> - Returns true if value1 and value2 are both true, otherwise returns false
 * <span style="background-color:black;padding:2px;">value1 <span style="color:red;">||</span> value2</span> - Returns true if value1 is true or if value2 is true (or both), otherwise returns false
