@@ -1,11 +1,8 @@
-# DON'T USE PYTHON
-
 # Week 4: Conditionals <!-- omit in toc -->
 
 This week we're going over how to have your code make decisions. It will be able to, based on data, choose either to run something or not or between several options.
 
 ## Table of Contents <!-- omit in toc -->
-- [DON'T USE PYTHON](#dont-use-python)
   - [Branches](#branches)
   - [If](#if)
     - [Else](#else)
@@ -100,4 +97,139 @@ There are a number of **boolean operators** which are used to create more involv
 
 ## Switch
 
-*mention inline switch*
+Often, you may only need to do your conditions based on the value of a single expression or variable, preforming different actions depending on the value of that single item. In these cases, rather than a chain of `if-else-if` statements, we use what is known as a `switch`. The syntax to create a switch statement is `switch(x) { } ` with x as the value you want to test. You then fill the block (`{ }`) with what are known as cases. The syntax for a case is `case y: /* what you want done if the value of x is y*/`. It's also important to put a `break` at the end of the case, which is done by just typing the word `break;` with the semicolon.
+
+```cs
+const int min = 1;
+const int max = 3;
+
+const int x = getIntFromAlgorithm(1, 3); // note that getIntFromAlgorithm is for example, such method doesn't actually exist among C#'s predefined methods
+
+switch(x) {
+  case 1:
+    System.Console.WriteLine("This is the smallest possible value");
+    System.Console.WriteLine(1);
+    break;
+  case 2:
+    System.Console.WriteLine("This is a middle-value");
+    break;
+  case 3:
+    System.Console.WriteLine("This is the largest possible value");
+    break;
+}
+```
+
+This code is preferable to, yet also equivalent to in terms of end result:
+
+```cs
+int min = 1;
+int max = 3;
+
+int x = getIntFromAlgorithm(1, 3);
+
+if(x == 1) {
+  System.Console.WriteLine("This is the smallest possible value");
+  System.Console.WriteLine(1);
+} else if(x == 2)
+  System.Console.WriteLine("This is a middle-value");
+else if(x == 3)
+  System.Console.WriteLine("This is the largest possible value");
+```
+
+(Note that one should never use if-statements where a switch would fit; this is just to demonstrate the concept)
+
+**Default**
+
+After your tests, one may want to do an action if none of the cases were met. This would be analogous to the final `else` in an `if-else-if-else` statement. This is done by instead of saying `case whatever:`, just saying `default:` after all of the cases (the default case MUST be at the very end).
+
+```cs
+switch(x) {
+  case min:
+    System.Console.WriteLine("This is the smallest possible value");
+    System.Console.WriteLine(1);
+    break;
+  case max:
+    System.Console.WriteLine("This is the largest possible value");
+    break;
+  default:
+    System.Console.WriteLine("It appears that x is a middle value or x out of range {0}-{1}", min, max);
+    break;
+}
+```
+
+*Note that from here on out, repl does not support what we are going to do. You will need to use a proper IDE or <a href="https://rextester.com/" target="_blank">this</a>.*
+
+**When**
+
+In some cases, there may not be a single value that you're looking for, but rather, a range of values. You can see this in our range example, where we do not have a way to differentiate between what's inside and outside the range unless by repeating cases over and over again, which is impossible if you don't know both `max` and `min`. The way to have a case without a calcified value is to `case {type} n when {boolean expression using n}`. Note that `n` can be replaced with anything as long as you also use the name n is replaced with in the boolean expression as well.
+
+```cs
+const int min = getMinFromMethod();
+const int max = getMaxFromMethod();
+const int x = getValueFromAlgorithm(); // Again, nsone of these methods exists predefined
+
+switch(x) {
+    case min:
+        System.Console.WriteLine("This is the smallest value in-range");
+        break;
+    case max:
+        System.Console.WriteLine("This is the largest value in-range");
+        break;
+    case int n when n > max:
+        System.Console.WriteLine("This value is not in-range as it is too big");
+        break;
+    case int n when n < min:
+        System.Console.WriteLine("This value is not in-range as it is too small");
+        break;
+    default:
+        System.Console.WriteLine("This value is between {0} and {1}", min, max);
+        break;
+}
+```
+
+This can be used with any type of data, not just `int`s.
+
+```
+System.Console.Write("Say something: ");
+string input = Console.ReadLine();
+string output;
+
+switch (input) {
+    case "":
+        output = "You didn't say anything";
+        break;
+    case "hi":
+        output = "Hi";
+        break;
+    case "bye":
+        output = "Sad to see you go :(";
+        break;
+    case string n when n.ToLower() == n: // n.ToLower() is n with all capital letters made lowercase, meaning that (n.ToLower() == n) will be true if there are no capital letters in n. We'll talk more about ToLower and methods like it in a later lesson
+        output = $"{n} has no uppercase letters";
+        break;
+    default:
+        output = "I've got nothing to say";
+        break;
+}
+
+System.Console.WriteLine(output);
+```
+(Note that this example will not run in Rextester as Rextester does not support console input)
+
+**Switch Expressions**
+
+This example would be cleaner if didn't have all of the `output =`s and `break`s. This can be done with a **switch expression** (not to be confused with the switch *statement*, which we learned above). Switch expressions are switch statements that will yield a piece of data, meaning that we can set a variable to the switch itself. This is done by putting the value you want to test before the `switch` keyword with the parentheses removed, replacing the `:`s with `=>`s, removing the `break`s and instances of the word `case` and making sure to give a piece of data to the cases rather than a series of statements. If there's a `default` case, the word `default` needs to be replaced with an `_`.
+
+```cs
+System.Console.Write("Say something: ");
+string input = Console.ReadLine();
+string output = input switch {
+    "" => "You didn't say anything",
+    "hi" => "Hi",
+    "bye" => "Sad to see you go :(",
+    string n when n.ToLower() == n => $"{n} has no uppercase letters",
+    _ => "I've got nothing to say"
+};
+
+System.Console.WriteLine(output);
+```
