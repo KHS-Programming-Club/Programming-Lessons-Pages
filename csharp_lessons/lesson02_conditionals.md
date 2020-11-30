@@ -226,7 +226,7 @@ switch(x) {
 
 This can be used with any type of data, not just `int`s.
 
-```
+```cs
 System.Console.Write("Say something: ");
 string input = Console.ReadLine();
 string output;
