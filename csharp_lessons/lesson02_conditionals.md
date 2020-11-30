@@ -23,7 +23,7 @@ This original concept from our [first lesson](../c_lessons/lesson00_intro_to_pro
 
 <script>
   window.onload = () => {
-    let wikipedia = document.getElementById('wikipedia');
+    let wikipedia = document.getElementsByTagName('blockquote')[0];
     let hide = document.getElementById('hide');
     let show = document.getElementById('show');
     
