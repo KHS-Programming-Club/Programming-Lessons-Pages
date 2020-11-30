@@ -130,7 +130,33 @@ class Program {
 
 ## Ternary
 
-`conditon ? option1 : option2`
+The ternary is used as a shorthand to the if-statement. It takes a boolean and yields one of two values based on that boolean, one if it's true and the other if it's false. This is powerful because it means that you do not have to repeat variable definitions, function calls, etc. in two different blocks of an if, and just have to worry about the condition and values themselves, saving programming and run time. It's syntax is as follows: `condition ? valueIfTrue : valueIfFalse`
+
+```cs
+System.Console.WriteLine(true ? "I will always be seen" : "I will never be seen");
+System.Console.WriteLine(!true ? "I will never be seen" : "I will always be seen");
+```
+
+This means that
+```cs
+bool saidHi = System.Console.ReadLine() == "hi";
+System.Console.WriteLine(saidHi ? "Hello" : "You didn't say hi");
+```
+is simply a quicker way to write
+```cs
+bool saidHi = System.Console.ReadLine() == "hi";
+if(saidHi)
+  System.Console.WriteLine("Hello");
+else
+  System.Console.WriteLine("You didn't say hi");
+```
+
+Functions can also be called directly within any of the ternary's three parts.
+
+```cs
+  System.Console.Write("Say something! ");
+  System.Console.WriteLine(System.Console.ReadLine() == "" ? "You didn't say anything! >:(" : "You said something! :)");
+```
 
 ## Switch
 
