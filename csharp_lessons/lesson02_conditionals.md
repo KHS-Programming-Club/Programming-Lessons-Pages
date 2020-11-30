@@ -103,7 +103,7 @@ Often, you may only need to do your conditions based on the value of a single ex
 const int min = 1;
 const int max = 3;
 
-const int x = getIntFromAlgorithm(1, 3); // note that getIntFromAlgorithm is for example, such method doesn't actually exist among C#'s predefined methods
+const int x = getIntFromAlgorithm(min, max); // note that getIntFromAlgorithm is for example, such method doesn't actually exist among C#'s predefined methods
 
 switch(x) {
   case 1:
@@ -125,7 +125,7 @@ This code is preferable to, yet also equivalent to in terms of end result:
 int min = 1;
 int max = 3;
 
-int x = getIntFromAlgorithm(1, 3);
+int x = getIntFromAlgorithm(min, max);
 
 if(x == 1) {
   System.Console.WriteLine("This is the smallest possible value");
