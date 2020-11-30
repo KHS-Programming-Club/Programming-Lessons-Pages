@@ -89,7 +89,44 @@ if (condition) {
 
 ## Boolean Operators
 
-There are a number of **boolean operators** which are used to create more involved logic.
+There are a number of **boolean operators** which are used to perform evaluations. These operators include:
+* value1 **==** value2 - Returns true if value1 is equal to value2, otherwise returns false
+* value1 **!=** value2 - Returns false if value1 is equal to value2, otherwise returns true, opposite of `==`
+* **!**value - Returns true if `value` is false and vice versa
+* value1 **&&** value2 - Returns true if value1 and value2 are both true, otherwise returns false
+* value1 **||** value2 - Returns true if value1 is true or if value2 is true (or both), otherwise returns false
+* value1 **^** value2 - Returns true if one value is true and the other is false, otherwise returns false
+
+```cs
+using System;
+
+class Program {
+   public static void Main() {
+      Console.Write("Say something: ");
+      string input1 = Console.ReadLine();
+
+      Console.Write("Say something again: ");
+      string input2 = Console.ReadLine();
+
+      if(input1 == input2)
+        Console.WriteLine("You said the same thing twice");
+      
+      Console.Write("Say something again: ");
+      string input3 = Console.ReadLine();
+
+      if(input1 == input2 && input1 == input3)
+        Concole.ReadLine("You said the same thing thrice");
+      else if(input1 == input2 || input1 == input3 || input3 == input2)
+        Console.ReadLine("You said the same thing twice at one poine");
+
+      if(!false)
+        Console.ReadLine("I will always be run since !false is always true");
+      
+      if(input3 == input1 ^ input3 == input2)
+        Console.ReadLine("You're last input is only somewhat original");
+   }
+}
+```
 
 ## Ternary
 
@@ -136,7 +173,7 @@ else if(x == 3)
   System.Console.WriteLine("This is the largest possible value");
 ```
 
-(Note that one should never use if-statements where a switch would fit; this is just to demonstrate the concept)
+(Note that one should never use if-statements in cases where a switch would fit and there would be more than one case; this is just to demonstrate the concept)
 
 **Default**
 
