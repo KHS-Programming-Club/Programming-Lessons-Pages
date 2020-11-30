@@ -5,13 +5,14 @@
 This week we're going over how to have your code make decisions. It will be able to, based on data, choose either to run something or not or between several options.
 
 ## Table of Contents <!-- omit in toc -->
-- [Branches](#branches)
-- [If](#if)
-  - [Else](#else)
-  - [Else-If](#else-if)
-- [Boolean Operators](#boolean-operators)
-- [Ternary](#ternary)
-- [Switch](#switch)
+- [DON'T USE PYTHON](#dont-use-python)
+  - [Branches](#branches)
+  - [If](#if)
+    - [Else](#else)
+    - [Else-If](#else-if)
+  - [Boolean Operators](#boolean-operators)
+  - [Ternary](#ternary)
+  - [Switch](#switch)
 
 ## Branches
 
@@ -61,7 +62,7 @@ In this example we've added an additional section that will run if the condition
 
 ### Else-If
 
-This can be further extended...
+This can be further extended to an **else-if** statement, which acts like another if statement but it will only be considered if the initial if is false. Using the plain-English sentence from earlier, this would sound something like, "if this then do that, otherwise if that then this".
 
 ```csharp
 bool condition = false;
@@ -74,7 +75,7 @@ if (condition) {
 }
 ```
 
-We can also add an `else` statement onto the end:
+These can be chained together in the format `if (...) {...} else if (...) {...} else if (...) {...}` and so on. We can also add an `else` statement onto the end, as seen in the following example.
 
 ```csharp
 bool condition = false;
@@ -91,6 +92,12 @@ if (condition) {
 
 ## Boolean Operators
 
+There are a number of **boolean operators** which are used to create more involved logic.
+
 ## Ternary
 
+`conditon ? option1 : option2`
+
 ## Switch
+
+*mention inline switch*
