@@ -90,12 +90,12 @@ if (condition) {
 ## Boolean Operators
 
 There are a number of **boolean operators** which are used to perform evaluations. These operators include:
-* value1 <span style="color:red;">==</span> value2 - Returns true if value1 is equal to value2, otherwise returns false
-* value1 <span style="color:red;">!=</span> value2 - Returns false if value1 is equal to value2, otherwise returns true, opposite of `==`
-* <span style="color:red;">!</span>value - Returns true if `value` is false and vice versa
-* value1 <span style="color:red;">&&</span> value2 - Returns true if value1 and value2 are both true, otherwise returns false
-* value1 <span style="color:red;">||</span> value2 - Returns true if value1 is true or if value2 is true (or both), otherwise returns false
-* value1 <span style="color:red;">^</span> value2 - Returns true if one value is true and the other is false, otherwise returns false
+* <span style="background-color:black;">value1 <span style="color:red;">==</span> value2</span> - Returns true if value1 is equal to value2, otherwise returns false
+* <span style="background-color:black;"><span style="color:red;">value1 <span style="color:red;">!=</span> value2</span> - Returns false if value1 is equal to value2, otherwise returns true, opposite of `==`
+* <span style="background-color:black;"><span style="color:red;">!</span>value</span> - Returns true if `value` is false and vice versa
+* <span style="background-color:black;">value1 <span style="color:red;">&&</span> value2</span> - Returns true if value1 and value2 are both true, otherwise returns false
+* <span style="background-color:black;">value1 <span style="color:red;">||</span> value2</span> - Returns true if value1 is true or if value2 is true (or both), otherwise returns false
+* <span style="background-color:black;">value1 <span style="color:red;">^</span> value2</span> - Returns true if one value is true and the other is false, otherwise returns false
 
 ```cs
 using System;
