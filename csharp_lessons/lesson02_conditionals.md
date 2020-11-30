@@ -1,3 +1,9 @@
+<script>
+  
+const WIKIPEDIA_HIDDEN_BY_DEFAULT = true;
+
+</script>
+
 # Week 4: Conditionals <!-- omit in toc -->
 
 This week we're going over how to have your code make decisions. It will be able to, based on data, choose either to run something or not or between several options.
@@ -38,6 +44,9 @@ This original concept from our [first lesson](../c_lessons/lesson00_intro_to_pro
       hide.style.display = 'inline-block';
       show.style.display = 'none';
     };
+    
+    if(WIKIPEDIA_HIDDEN_BY_DEFAULT)
+      hide.onclick();
   };
 </script>
 
