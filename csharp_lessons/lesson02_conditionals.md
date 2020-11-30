@@ -13,12 +13,14 @@ This week we're going over how to have your code make decisions. It will be able
 
 ## Branches
 
-This original concept from our [first lesson](../c_lessons/lesson00_intro_to_programming.md) is brought out of theory and into real application here: branches. This concept says, in procedural programming, a program can decide between two or more sets of operations based on a condition (aka make a decision). Here's a more technical definition from Wikipedia: <span id="show" style="display: none;">[Show]</span>
+This original concept from our [first lesson](../c_lessons/lesson00_intro_to_programming.md) is brought out of theory and into real application here: branches. This concept says, in procedural programming, a program can decide between two or more sets of operations based on a condition (aka make a decision). Here's a more technical definition from Wikipedia:
+<span id="show" style="display: none;">[Show]</span>
 
 <div id="wikipedia">
 > A branch is an instruction in a computer program that can cause a computer to begin executing a different instruction sequence and thus deviate from its default behavior of executing instructions in order. Branch (or branching, branched) may also refer to the act of switching execution to a different instruction sequence as a result of executing a branch instruction. Branch instructions are used to implement control flow in program loops and conditionals (i.e., executing a particular sequence of instructions only if certain conditions are satisfied).
 > 
-> A branch instruction can be either an unconditional branch, which always results in branching, or a conditional branch, which may or may not cause branching depending on some condition. Also, depending on how it specifies the address of the new instruction sequence (the "target" address), a branch instruction is generally classified as direct, indirect or relative, meaning that the instruction contains the target address, or it specifies where the target address is to be found (e.g., a register or memory location), or it specifies the difference between the current and target addresses. — **[Branch (computer science)](https://en.wikipedia.org/wiki/Branch_(computer_science)), Wikipedia; Retrieved Nov 2020** <span id="hide">[Hide]</span>
+> A branch instruction can be either an unconditional branch, which always results in branching, or a conditional branch, which may or may not cause branching depending on some condition. Also, depending on how it specifies the address of the new instruction sequence (the "target" address), a branch instruction is generally classified as direct, indirect or relative, meaning that the instruction contains the target address, or it specifies where the target address is to be found (e.g., a register or memory location), or it specifies the difference between the current and target addresses. — **[Branch (computer science)](https://en.wikipedia.org/wiki/Branch_(computer_science)), Wikipedia; Retrieved Nov 2020**
+<span id="hide">[Hide]</span>
 </div>
 
 <script>
@@ -30,12 +32,12 @@ This original concept from our [first lesson](../c_lessons/lesson00_intro_to_pro
     hide.onclick = () => {
       wikipedia.style.display = 'none';
       hide.style.display = 'none';
-      show.style.display = 'block';
+      show.style.display = 'inline-block';
     };
     
     show.onclick = () => {
-      wikipedia.style.display = 'block';
-      hide.style.display = 'block';
+      wikipedia.style.display = 'inline-block';
+      hide.style.display = 'inline-block';
       show.style.display = 'none';
     };
   };
