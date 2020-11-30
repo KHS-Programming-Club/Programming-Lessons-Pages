@@ -29,7 +29,7 @@ Let's take a look at an example if statement, then break down how it works:
 bool condition = true;
 
 if (condition) {
-  Console.WriteLine("Apparently condition is true");
+  System.Console.WriteLine("Apparently condition is true");
 }
 ```
 
@@ -49,9 +49,9 @@ We can extend this concept of "if this then do that" to add "if this then do tha
 bool condition = false;
 
 if (condition) {
-  Console.WriteLine("Apparently condition is true");
+  System.Console.WriteLine("Apparently condition is true");
 } else {
-  Console.WriteLine("Apparently condition is false");
+  System.Console.WriteLine("Apparently condition is false");
 }
 ```
 
@@ -66,9 +66,9 @@ bool condition = false;
 bool other_condition = true;
 
 if (condition) {
-  Console.WriteLine("Apparently condition is true");
+  System.Console.WriteLine("Apparently condition is true");
 } else if (other_condition) {
-  Console.WriteLine("Apparently condition is false, but other condition is true");
+  System.Console.WriteLine("Apparently condition is false, but other condition is true");
 }
 ```
 
@@ -79,11 +79,11 @@ bool condition = false;
 bool other_condition = true;
 
 if (condition) {
-  Console.WriteLine("Apparently condition is true");
+  System.Console.WriteLine("Apparently condition is true");
 } else if (other_condition) {
-  Console.WriteLine("Apparently condition is false, but other condition is true");
+  System.Console.WriteLine("Apparently condition is false, but other condition is true");
 } else {
-  Console.WriteLine("Apparently both conditions are false");
+  System.Console.WriteLine("Apparently both conditions are false");
 }
 ```
 
