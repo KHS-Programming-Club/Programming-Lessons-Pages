@@ -232,10 +232,10 @@ switch(x) {
 This code is preferable to, yet also equivalent to in terms of end result:
 
 ```cs
-int min = 1;
-int max = 3;
+const int min = 1;
+const int max = 3;
 
-int x = getIntFromAlgorithm(min, max);
+const int x = getIntFromAlgorithm(min, max);
 
 if(x == 1) {
   System.Console.WriteLine("This is the smallest possible value");
