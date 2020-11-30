@@ -21,7 +21,7 @@ This original concept from our [first lesson](../c_lessons/lesson00_intro_to_pro
 
 ## If
 
-The `if` statement is among the most important and universal parts of programming; appearing, in some form, in pretty much every language. Though there are minor differences in syntax, the functionality is the same. All this to say this knowledge transfers well to other languages and is essential for programming.
+The `if` statement is among the most important and universal parts of programming; appearing, in some form, in pretty much every language. It allows the program to perform different actions depending on supplied existing conditions through the creation of branches. This will allow us to make much more interactive and dynamic programs from what we have been making. It's syntax is `if(condition) { ... }`.
 
 Let's take a look at an example if statement, then break down how it works:
 
@@ -34,10 +34,10 @@ if (condition) {
 ```
 
 1. `bool condition = true` - a variable of type boolean is delcared and set to true
-2. `if (condition) {` - here's where the new stuff starts to come in; 
+2. `if (condition) {` - here's where the if-statement begins; 
    1. the `if` keyword signified this is an if statement
    2. inside parenthesis is the condition statement (in this case it's a variable called condition); this tells the computer the *condition* under which the code will execute (ie. if the boolean is true it will and if it's false it won't)
-3. `{ ... }` - these curly braces contain the code that will run if the *condition* is true; in this case it writes "Apparently conditon is true" to the console
+3. `{ ... }` - these curly braces — called a block — contain the code that will run if the *condition* is true; in this case it writes "Apparently conditon is true" to the console
 
 In plain English an if statement like this would sound like: "If this is correct, then say 'Apparently condition is true'"; or, more generally, "if this then do that".
 
@@ -85,6 +85,29 @@ if (condition) {
 } else {
   System.Console.WriteLine("Apparently both conditions are false");
 }
+```
+
+It should also be noted that when there is only one statement in a block, the curly-braces may be omitted, so instead of
+
+```cs
+if(condition) {
+  doThing();
+} else {
+  doOtherThing();
+}
+```cs
+it's common to just do
+```cs
+if(condition)
+  doThing();
+else
+  doOtherThing();
+```cs
+though again, you can only do so if there's only one statement in the block, so this for example would NOT work as intended
+```
+if(condition)
+  doThing1();
+  doThing2(); // This is intended to only call doThing2 if condition is true, but since when there's no curly-braces, a block can only have one statement, the compiler reads it as seperate from the if-statement, and runs it regardless of condition.
 ```
 
 ## Boolean Operators
