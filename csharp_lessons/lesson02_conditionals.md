@@ -283,7 +283,7 @@ In some cases, there may not be a single value that you're looking for, but rath
 ```cs
 const int min = getMinFromMethod();
 const int max = getMaxFromMethod();
-const int x = getValueFromAlgorithm(); // Again, nsone of these methods exists predefined
+const int x = getValueFromAlgorithm(); // Again, none of these methods actually exist predefined
 
 switch(x) {
     case min:
