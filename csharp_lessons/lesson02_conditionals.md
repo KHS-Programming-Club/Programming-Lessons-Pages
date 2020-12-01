@@ -169,15 +169,15 @@ class Program {
       string input3 = Console.ReadLine();
 
       if(input1 == input2 && input1 == input3)
-        Concole.ReadLine("You said the same thing thrice");
+        Concole.WriteLine("You said the same thing thrice");
       else if(input1 == input2 || input1 == input3 || input3 == input2)
-        Console.ReadLine("You said the same thing twice at one poine");
+        Console.WriteLine("You said the same thing twice at one poine");
 
       if(!false)
-        Console.ReadLine("I will always be run since !false is always true");
+        Console.WriteLine("I will always be run since !false is always true");
       
       if(input3 == input1 ^ input3 == input2)
-        Console.ReadLine("You're last input is only somewhat original");
+        Console.WriteLine("You're last input is only somewhat original");
    }
 }
 ```
