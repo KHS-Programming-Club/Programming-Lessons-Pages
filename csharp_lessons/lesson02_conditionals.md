@@ -335,7 +335,7 @@ System.Console.WriteLine(output);
 
 **Switch Expressions**
 
-This example would be cleaner if didn't have all of the `output =`s and `break`s. This can be done with a **switch expression** (not to be confused with the switch *statement*, which we learned above). Switch expressions are switch statements that will yield a piece of data, meaning that we can set a variable to the switch itself. This is done by putting the value you want to test before the `switch` keyword with the parentheses removed, replacing the `:`s with `=>`s, removing the `break`s and instances of the word `case` and making sure to give a piece of data to the cases rather than a series of statements. If there's a `default` case, the word `default` needs to be replaced with an `_`.
+This example would be cleaner if didn't have all of the `output =`s and `break`s. This can be done with a **switch expression** (not to be confused with the switch *statement*, which we learned above). Switch expressions are switch statements that will yield a piece of data, meaning that we can set a variable to the switch itself or put the switch in a method call. This is done by putting the value you want to test before the `switch` keyword with the parentheses removed, replacing the `:`s with `=>`s, removing the `break`s and instances of the word `case` and making sure to give a piece of data to the cases rather than a series of statements. If there's a `default` case, the word `default` needs to be replaced with an `_`.
 
 ```cs
 System.Console.Write("Say something: ");
