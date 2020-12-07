@@ -11,6 +11,10 @@ Below is a list of pages on the site; more will be added shortly
 * [Week 2: C to C#](csharp_lessons/lesson00_c_to_csharp.md)
 * [Week 3: Strings](csharp_lessons/lesson01_strings.md)
 * [Week 4: Conditionals](csharp_lessons/lesson02_conditionals.html)
+* [Week 5: Arrays and Loops](csharp_lessons/lesson03_arrays.md)
+* Week 6: Methods
+* Week 7: Classes
+* Week 8: Wrapping Up
 
 ### Reference
 * [C Printf](printf_info.md)
