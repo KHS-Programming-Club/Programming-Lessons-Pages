@@ -11,6 +11,8 @@
   - [Do-While Loop](#do-while-loop)
   - [For Loop](#for-loop)
   - [Foreach Loop](#foreach-loop)
+- [Continue](#continue)
+- [Breaks](#break)
 
 ## Array
 
