@@ -191,6 +191,12 @@ for (int i = 0; i <= 10; i++) {
 
 This will have the same result as the previous while and do-while loops, but is much more readable and concise.
 
+The parentheses of a for-loop consist of three parts:
+1. What will occur prior to any iterations and be applied within the loops scope (meaning `i` can't be access outside the loop)
+2. The condition that the loop will check, similar to what's in the parentheses of a while-loop
+3. What occurs after each iteration of the loop
+The first is used to set up what is needed for the loop condition to work and the last is used to make the loop condition change at a certain point. These items may be left blank (just remember to still keep the semicolons), but given the functionality and purpose of a for-loop, this is quite uncommon. If the condition is left blank, it will default to true, creating an infinite loop if there is no `break` statement (`for(;;)` is the common way of doing infinite loops in C-languages (though `while(true)` certainly works as well))
+
 ### Foreach Loop
 
 In C#, there is a special loop for looping through arrays that take off much of the strain of iterating through indexes. This loop is called the **foreach** loop and takes a placeholder into which it will put a particular value during each iteration. The syntax is `foreach(type variableName in arrayName)`. The typical naming-covention for foreach loops is `singular in plural` (e.g. `item in items`).
@@ -203,3 +209,22 @@ foreach(number in numbers) {
   sum += value;
 }
 ```
+
+### Continue
+
+If you wish to prematurely exit a specific iteration of a for-loop and move on to the next one (or terminate the loop if it was the last iteration), you can use a statement known as **continue**. It's syntax is quite easy as following: `continue;`.
+
+```cs
+int sum = 0;
+for(int i = 1; i <= 20; i++) {
+  if(i == 13)
+    continue;
+  sum += i;
+}
+```
+
+In the example, `sum` will be equal to every integer from 1-20 added together with the exception of 13.
+
+### Break
+
+Break is used to exit the loop entirely. Once you add `break` in a loop, not only will it terminate the iteration, but the loop entirely. This would be the equivalent to continuing and forcing the condition false.
