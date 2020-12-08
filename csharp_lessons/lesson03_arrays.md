@@ -157,6 +157,7 @@ while (i <= 10) {
 * `(i <= 10)` - condition under which the loop will continue (much like if statement that runs every time through the array)
   * it will continue to repeat through the loop until this is false
   * by traditon, i is used; if i is unavailable, j is the backup (these are not strict requirements but are *extremely* common)
+    * if both are unavailable, k is the backup, and if all the aforementioned are unavailable, n is the backup
 
 Note that this can easily become an infinte loop if there's no way the condition will become false.
 
