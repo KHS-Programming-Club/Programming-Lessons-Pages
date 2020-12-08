@@ -129,10 +129,69 @@ System.Console.WriteLine(array3D[1, 1, 1]); //> 14
 
 ## Loops
 
+Loops are extremely useful, especially in the context of arrays. At their core, loops allow you to repeat a section of code multiple times.
+
 ### While Loop
+
+This is the most basic kind of loop. As an example, let's say we want to add up all integers 1-10 inclusive:
+
+```csharp
+int i = 1;
+int total = 0;
+
+// while loop
+while (i <= 10) {
+  total += i; // adds i to total
+  i++; // increments i
+}
+```
+
+* `while` - notes this is a while loop
+* `(i <= 10)` - condition under which the loop will continue (much like if statement that runs every time through the array)
+  * it will continue to repeat through the loop until this is false
+  * by traditon, i is used; if i is unavailable, j is the backup (these are not strict requirements but are *extremely* common)
+
+Note that this can easily become an infinte loop if there's no way the condition will become false.
 
 ### Do-While Loop
 
+This is almost identical to the while loop, but instead of checking the condition *then* executing the code, it runs the code then checks the condition before moving on to the next time though. This ensures the code will run at least once.
+
+```csharp
+int i = 1;
+int total = 0;
+
+do {
+  total += i; // adds i to total
+  i++; // increments i
+} while (i <= 10);
+```
+
+Adapting the example from earlier, this will actually have the same result because of how the problem is set up. The most useful feature of a do-while is the guarentee it will run at least once.
+
 ### For Loop
 
+For loops provide a level of simplification to a while loop. Instead of having to declare `int i = 0;`, the condition, and `i++` all separate, for loops combine all of these into the main statement. This is once again best explained by adapting the example:
+
+```csharp
+int total = 0;
+
+for (int i = 0; i <= 10; i++) {
+  total += i;
+}
+```
+
+This will have the same result as the previous while and do-while loops, but is much more readable and concise.
+
 ### Foreach Loop
+
+In C#, there is a special loop for looping through arrays that take off much of the strain of iterating through indexes. This loop is called the **foreach** loop and takes a placeholder into which it will put a particular value during each iteration. The syntax is `foreach(type variableName in arrayName)`. The typical naming-covention for foreach loops is `singular in plural` (e.g. `item in items`).
+
+```cs
+int[] numbers = {1, 7, 3, 8, 22};
+int sum = 0;
+
+foreach(number in numbers) {
+  sum += value;
+}
+```
