@@ -39,7 +39,7 @@ int[] example_two = new int[] { 1, 2, 3, 4, 5 }; // automatically figures out le
 int[] example_three = { 1, 2, 3, 4, 5 }; // shorthand for above method
 ```
 
-It should also be noted that in the first example on the doc, items are assigned to the array, and all of those items are `0`. In such a scenario where an empty array is created, items of arrays that are of a reference type or nullable are given the default value of `null` and items that are not are given the value of `0` (or an equivalent of zero if it's not a number-type, such as `False` for booleans and the NULL character (U+0000) for chars).
+It should also be noted that in the first example on the doc, items are assigned to the array, and all of those items are `0`. In such a scenario where an empty array is created, items of arrays that are of a reference type or nullable are given the default value of `null` and items that are not are given the value of `0` (or an equivalent of zero if it's not a number-type, such as `False` for booleans and the NULL character (U+0000) for chars). These values can later be overwritten.
 
 ### Accessing Values
 
