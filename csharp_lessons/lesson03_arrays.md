@@ -39,6 +39,8 @@ int[] example_two = new int[] { 1, 2, 3, 4, 5 }; // automatically figures out le
 int[] example_three = { 1, 2, 3, 4, 5 }; // shorthand for above method
 ```
 
+It should also be noted that in the first example on the doc, items are assigned to the array, and all of those items are `0`. In such a scenario where an empty array is created, items of arrays that are of a reference type or nullable are given the default value of `null` and items that are not are given the value of `0` (or an equivalent of zero if it's not a number-type, such as `False` for booleans and the NULL character (U+0000) for chars).
+
 ### Accessing Values
 
 Starting with a basic array from the last part:
@@ -65,6 +67,11 @@ int[][] jagged_array = {
   new int[] { 84, 52, 61, 67 },
   new int[] { 10, 56 }
 };
+```
+
+This array definition, like the first example on the doc, can be declared by supplying the size of the outermost array and leaving the innermost lengths indefinite. One key note of differentiation is that this is a true declaration as the innermost arrays are not given default values.
+```cs
+int[][] jagged_array = new int[3][];
 ```
 
 To access a value on a jagged array, simply use `[i]` as before to get on of the arrays contained within; or `[i][j]` to access a value on one of these arrays (j, by convention, is used as a placeholder if i is unavailable and carries no other significance).
