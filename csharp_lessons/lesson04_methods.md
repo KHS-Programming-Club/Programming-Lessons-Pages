@@ -6,6 +6,7 @@
 - [Calls](#calls)
   - [Scope](#scope)
 - [Parameters and Arguments](#parameters-and-arguments)
+  - [Ref and Out Keywords](#ref-and-out-keywords)
 - [Return Values](#return-values)
   - [Recursion](#recursion)
   - [Lambda Operator](#lambda-operator)
@@ -83,6 +84,52 @@ public class Program {
         for(int i = 0; i < times; i++)
             System.Console.WriteLine(str);
     }
+}
+```
+
+### Ref and Out Keywords
+
+These parameters are local instances of whatever you supply, meaning that if you supply a variable, it's creating a local variable for it to access and keeping the original variable unaffected by anything in the method. This is generally the way you want it to stay, but in some cases you may want to make changes to a supplied variable rather than simply reading its value. To be able to do this, we must precede the parameter and argument with the **ref** keyword. 
+
+```cs
+public static void Main(string[] args) {
+  uint yearsAlive = 0;
+
+  Age(ref yearsAlive, 10u);
+  System.Console.WriteLine(yearsAlive); // 10
+
+  Age(ref yearsAlive, 20u);
+  System.Console.WriteLine(yearsAlive); // 30
+}
+
+public static void Age(ref uint yearsAlive, uint years) {
+  yearsAlive += years;
+  System.Console.WriteLine($"You have aged {years} years and are now {yearsAlive} years old.");
+}
+```
+
+In some cases, however, one may wish to assign to variables, including undefined ones, which will not work with the ref keyword. This is because the ref keyword only works with variables that have already been defined. If you wish to extend it to variables that have not been defined, you must use the **out** keyword. One important constraint of this keyword is that it must be defined (not just modified) in the method before being used, and if it's not used, it must still be defined before the method terminates.
+
+```cs
+public static void Main(string[] args) {
+  string greeting;
+
+  RepeatVariable(out greeting, "Hello", "! ", 3);
+  System.Console.WriteLine(greeting); // Hello! Hello! Hello!
+}
+
+public static void RepeatVariable(out string variable, string str, string seperator, uint times) {
+  variable = times == 0 ? "" : str;
+  for(int i = 1; i < times; i++)
+    variable += seperator + str;
+}
+```
+
+You can also use the **in** keyword, which prevents even a variable's local instance from being assigned to or modified, making it a **readonly** variable.
+```cs
+// Note that due to this being a part of a newer C# version, this will work in neither Replit nor Rextestor
+public static void Increment(in int variable) {
+  variable++; // Error
 }
 ```
 
