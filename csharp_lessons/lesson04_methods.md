@@ -76,7 +76,7 @@ Sometimes, one may need to utilize data from the function that a method was call
 public class Program {
     public static void Main(string[] args) {
         RepeatedPrint("Hello", 5u); // prints "Hello" 5 times
-        RepeatedPrint("Goodbye", 2u); // prints "Hello" 2 times
+        RepeatedPrint("Goodbye", 2u); // prints "Goodbye" 2 times
     }
 
     public static void RepeatedPrint(string str, uint times) { // prints {str} {times} times 
