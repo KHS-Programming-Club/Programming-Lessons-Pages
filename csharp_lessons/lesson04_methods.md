@@ -15,7 +15,7 @@
 
 ## What is a method?
   
-A method is a subroutine linked with a particular object. This means that they describe a particular behavior of said object and that when called, it moves to the block of the function's defined statements in the control flow, similarly to how you can have labels and gotos, discussed in the first lesson. Methods, however, differ from labels/gotos in that upon the method's final statement being executed, it moves back to where it was in the control flow.
+A method is a **subroutine** linked with a particular object. This means that they describe a particular behavior of said object and that when called, it moves to the block of the function's defined statements in the control flow, similarly to how you can have labels and gotos, discussed in the first lesson. Methods, however, differ from labels/gotos in that upon the method's final statement being executed, it moves back to where it was in the control flow.
   
 ![Method Control Flow](https://khs-programming-club.github.io/assets/images/method.png)
 
@@ -46,7 +46,7 @@ public static void PrintHello() {
 
 ## Calls
 
-A method call causes each of the statements inside to be run. A call is done with the following syntax: `name();`
+A method **call** causes each of the statements inside to be run. A call is done with the following syntax: `name();`
 
 ```cs
 public class Program {
@@ -66,11 +66,11 @@ Prints: `HelloGoodbye.HelloGoodbye`
 
 ### Scope
 
-Every variable has what is known as a scope. A scope is a description of where the variable can be accessed. Variables created inside a method is has a local scope, meaning that they cannot be accessed globally, globally referring to the entirety of the global scope, which includes absolutely every part of your project. These local variables scope is specific to the methods they are in, meaning that a variable in one method cannot be accessed from any other method.
+Every variable has what is known as a **scope**. A scope is a description of where the variable can be accessed. Variables created inside a method is has a **local scope**, meaning that they cannot be accessed **globally**, globally referring to the entirety of the **global scope**, which includes absolutely every part of your project. These local variables scope is specific to the methods they are in, meaning that a variable in one method cannot be accessed from any other method.
 
 ## Parameters and Arguments
 
-Sometimes, one may need to utilize data from the function that a method was called in within your self-defined method's body. This is done with parameters, which are placeholder variables that are given an argument, or a value upon method call, scoped within the method being called. The syntax for creating a parameter is to put `type parameterName` inside the parentheses of the method's declaration and the syntax for passing an argument is to put the argument's value inside the parethesis of the method call. In order to have multiple parameters, you do the same process, but seperate the parameters and arguments with commas. It's conventional for the parameter to be named in camelCasing rather than PascalCasing like other variables (which is approximately the same apart from the first letter being lowercase).
+Sometimes, one may need to utilize data from the function that a method was called in within your self-defined method's body. This is done with **parameters**, which are placeholder variables that are given an **argument**, which is the value put inside said placeholder, scoped within the method being called. The syntax for creating a parameter is to put `type parameterName` inside the parentheses of the method's declaration and the syntax for passing an argument is to put the argument's value inside the parethesis of the method call. In order to have multiple parameters, you do the same process, but seperate the parameters and arguments with commas. It's conventional for the parameter to be named in camelCasing rather than PascalCasing like other variables (which is approximately the same apart from the first letter being lowercase).
 
 ```cs
 public class Program {
@@ -88,7 +88,7 @@ public class Program {
 
 ## Return Values
 
-In some cases, one may need a value from inside the method to be accessible to where the method was called, typically the result of some sort of operation or algorithm. We do this using a return statement, which terminates the function and sets the value to a following value. The syntax for this statement is `return {value};`. Note that in void, you can also just do `return;` if you need to conditionally, preliminarily terminate the method. It's also important that the return-type as mentioned above of the method is the type that you are returning. If a method is not `void`, there must be a return statement that will run in every case, and if it is void, there must be no value that follows any of the return statements.
+In some cases, one may need a value from inside the method to be accessible to where the method was called, typically the result of some sort of operation or algorithm. We do this using a **return statement**, which terminates the function and sets the value to a following value. The syntax for this statement is `return {value};`. Note that in void, you can also just do `return;` if you need to preliminarily terminate the method (almost always on a particular condition). It's also important that the return-type as mentioned above of the method is the type that you are returning. If a method is not `void`, there must be a return statement that will run in every case, and if it is void, there must be no value that follows any of the return statements.
 
 ```cs
 public static void Main(string[] args) {
@@ -136,7 +136,7 @@ public static int Factorial(int number) =>
 
 ## Predefined
 
-In C# there are many predefined methods. A predefined method is a method that is added by the compiler without the programmer needing to do anything. Here is a list of some common predefined methods:
+In C# there are many **predefined methods**. A predefined method is a method that is added by the compiler without the programmer needing to do anything. Here is a list of some common predefined methods:
 
 ### String Methods
 
