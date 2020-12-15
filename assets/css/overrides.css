@@ -10,6 +10,6 @@ thead, tr, th {
   text-align: center!important;
 }
 
-b {
+b, strong {
   font-weight: 900;
 }
