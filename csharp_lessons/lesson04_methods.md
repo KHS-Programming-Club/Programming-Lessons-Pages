@@ -11,10 +11,10 @@
 - [Predefined](#predefined)
   - [String Methods](#string-methods)
   - [Math Methods](#math-methods)
+
+## What is a method?
   
-  ## What is a method?
-  
-  A method is a subroutine linked with a particular object. This means that they describe a particular behavior of said object and that when called, it moves to the block of the function's defined statements in the control flow, similarly to how you can have labels and gotos, discussed in the first lesson. Methods, however, differ from labels/gotos in that upon the method's final statement being executed, it moves back to where it was in the control flow.
+A method is a subroutine linked with a particular object. This means that they describe a particular behavior of said object and that when called, it moves to the block of the function's defined statements in the control flow, similarly to how you can have labels and gotos, discussed in the first lesson. Methods, however, differ from labels/gotos in that upon the method's final statement being executed, it moves back to where it was in the control flow.
   
 ![Method Control Flow](https://khs-programming-club.github.io/assets/images/method.png)
 
