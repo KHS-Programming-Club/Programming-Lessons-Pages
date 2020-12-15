@@ -28,7 +28,7 @@ All methods in C# are structured in a manner much similar to the Main method. Th
 modifier type name(parameterList) {}
 ```
 
-Notes regarding each of the aforementioned components
+What will be supplied for each of the aforementioned components
 1. **Access Modifier:** We will be going over all of the different access-modifiers and how they work later on, but for now we will put the word `public` in place of the modifier.
 2. **Return Type:** A return-type can be any of the types that we have gone over, including arrays, but they must have a corresponding return value, which we will discuss later on in this lesson, but for now we will use a new type, **void**, which indicates the lack of a return value.
 3. **Name:** A method can be named anything that a variable can be, and follows the same naming conventions as variables as well.
