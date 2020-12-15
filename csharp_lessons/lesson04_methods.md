@@ -138,16 +138,16 @@ public static int Factorial(int number) =>
 
 
 ### String Methods
-* string: **<string>.ToLower()** - Takes no parameters and returns <string> with all uppercase letters made lowercase
-* string: **<string>.ToUpper()** - Takes no parameters and returns <string> with all lowercase letters made uppercase
-* bool: **<string>.Contains()** - Takes a substring and returns true if the substring is inside <string>, otherwise returns false.
-* bool: **<string>.StartsWith()** - Takes a substring and returns true if <string> starts with the substring, otherwise returns false.
-* bool: **<string>.EndsWith()** - Takes a substring and returns true if <string> ends with the substring, otherwise returns false.
-* string: **<string>.Trim()** - Takes no parameters and returns <string> with all leading and trailing whitespace removed.
-* int: **<string>.IndexOf()** - Takes a substring and returns the index of where substring first appears the string. If it isn't in the string, returns -1.
-* int: **<string>.LastIndexOf()** - Takes a substring and returns the index of where substring last appears the string. If it isn't in the string, returns -1.
-* string: **<string>.Substring()** - Takes an int startIndex and returns everything from that index on OR takes an int startIndex and int length and returns {length} characters starting at the startIndex.
-* string[]: **<string>.Split()** - Takes a string seperator and returns a string array of <string> divided by said seperator. So `"1.2.3".Split(".")` is `new string[] {"1", "2", "3"}`
+* string: **\<string\>.ToLower()** - Takes no parameters and returns <string> with all uppercase letters made lowercase
+* string: **\<string\>.ToUpper()** - Takes no parameters and returns <string> with all lowercase letters made uppercase
+* bool: **\<string\>.Contains()** - Takes a substring and returns true if the substring is inside <string>, otherwise returns false.
+* bool: **\<string\>.StartsWith()** - Takes a substring and returns true if <string> starts with the substring, otherwise returns false.
+* bool: **\<string\>.EndsWith()** - Takes a substring and returns true if <string> ends with the substring, otherwise returns false.
+* string: **\<string\>.Trim()** - Takes no parameters and returns <string> with all leading and trailing whitespace removed.
+* int: **\<string\>.IndexOf()** - Takes a substring and returns the index of where substring first appears the string. If it isn't in the string, returns -1.
+* int: **\<string\>.LastIndexOf()** - Takes a substring and returns the index of where substring last appears the string. If it isn't in the string, returns -1.
+* string: **\<string\>.Substring()** - Takes an int startIndex and returns everything from that index on OR takes an int startIndex and int length and returns {length} characters starting at the startIndex.
+* string[]: **\<string\>.Split()** - Takes a string seperator and returns a string array of <string> divided by said seperator. So `"1.2.3".Split(".")` is `new string[] {"1", "2", "3"}`
 * string: **string.Join()** - Takes a string seperator and does the reverse of spit. So `string.Join(".", new string[] {"1", "2", "3"})` is `"1.2.3"`. If the seperator is ",", it can be left out as it is implied.
 
 ### Math
