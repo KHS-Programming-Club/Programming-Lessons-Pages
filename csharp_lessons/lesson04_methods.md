@@ -136,8 +136,12 @@ public static int Factorial(int number) =>
 
 ## Predefined
 
+In C# there are many predefined methods. A predefined method is a method that is added by the compiler without the programmer needing to do anything. Here is a list of some common predefined methods:
 
 ### String Methods
+
+\*Note that <string> is to be replaced by an actual string.
+
 * string: **\<string\>.ToLower()** - Takes no parameters and returns <string> with all uppercase letters made lowercase
 * string: **\<string\>.ToUpper()** - Takes no parameters and returns <string> with all lowercase letters made uppercase
 * bool: **\<string\>.Contains()** - Takes a substring and returns true if the substring is inside <string>, otherwise returns false.
