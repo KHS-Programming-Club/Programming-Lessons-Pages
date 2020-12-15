@@ -97,7 +97,7 @@ public static void Main(string[] args) {
 }
 
 public static string Repeat(string str, uint times) { 
-    StringBuilder Result = new StringBuilder();
+    System.Text.StringBuilder Result = new System.Text.StringBuilder();
 
     for(int i = 0; i < times; i++)
         Result.Append(str);
