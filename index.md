@@ -12,7 +12,7 @@ Below is a list of pages on the site; more will be added shortly
 * [Week 3: Strings](csharp_lessons/lesson01_strings.md)
 * [Week 4: Conditionals](csharp_lessons/lesson02_conditionals.html)
 * [Week 5: Arrays and Loops](csharp_lessons/lesson03_arrays.md)
-* Week 6: Methods
+* [Week 6: Methods](csharp_lessons/lesson04_methods.md)
 * Week 7: Classes
 * Week 8: Wrapping Up
 
