@@ -140,7 +140,7 @@ In C# there are many predefined methods. A predefined method is a method that is
 
 ### String Methods
 
-\*Note that <string> is to be replaced by an actual string.
+\*Note that \<string\> is to be replaced by an actual string.
 
 * string: **\<string\>.ToLower()** - Takes no parameters and returns <string> with all uppercase letters made lowercase
 * string: **\<string\>.ToUpper()** - Takes no parameters and returns <string> with all lowercase letters made uppercase
