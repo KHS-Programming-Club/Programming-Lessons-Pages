@@ -7,8 +7,9 @@
   - [Scope](#scope)
 - [Parameters and Arguments](#parameters-and-arguments)
 - [Return Values](#return-values)
+  - [Recursion](#recursion)
   - [Lambda Operator](#lambda-operator)
-- [Predefined](#predefined)
+- [Predefined Methods](#predefined-methods)
   - [String Methods](#string-methods)
   - [Math Methods](#math-methods)
 
@@ -35,8 +36,10 @@ What will be supplied for each of the aforementioned components
 4. **Parameter List:** We will be going over parameters later in the lesson, for now we will keep this space blank, which means that there are no parameters
 5. **Body:** The body consists of the curly-braces and everything inside it. Inside the curly-braces goes all of the statements that you want to run upon calling the function. These statements can be any of what we've learned and follow the same syntax as what would be inside the Main method.
 
+For all cases which can be used within the scope of what we have learned, we are also required to follow `public` keyword with a keyword called `static`. We will go over what this keyword does in a later lesson.
+
 ```cs
-public void PrintHello() {
+public static void PrintHello() {
   System.Console.WriteLine("Hello!");
 }
 ```
@@ -53,7 +56,7 @@ public class Program {
     SayHello();
   }
 
-  public void SayHello() {
+  public static void SayHello() {
     System.Console.Write("Hello");
     System.Console.Write("Goodbye");
   }
@@ -67,7 +70,7 @@ Every variable has what is known as a scope. A scope is a description of where t
 
 ## Parameters and Arguments
 
-Sometimes, one may need to utilize data from the function that a method was called in within your self-defined method's body. This is done with parameters, which are placeholder variables that are given an argument, or a value upon method call, scoped within the method being called. The syntax for creating a parameter is to put `type parameterName` inside the parentheses of the method's declaration and the syntax for passing an argument is to put the argument's value inside the parethesis of the method call. In order to have multiple parameters, you do the same process, but seperate the parameters and arguments with commas.
+Sometimes, one may need to utilize data from the function that a method was called in within your self-defined method's body. This is done with parameters, which are placeholder variables that are given an argument, or a value upon method call, scoped within the method being called. The syntax for creating a parameter is to put `type parameterName` inside the parentheses of the method's declaration and the syntax for passing an argument is to put the argument's value inside the parethesis of the method call. In order to have multiple parameters, you do the same process, but seperate the parameters and arguments with commas. It's conventional for the parameter to be named in camelCasing rather than PascalCasing like other variables (which is approximately the same apart from the first letter being lowercase).
 
 ```cs
 public class Program {
@@ -76,7 +79,7 @@ public class Program {
         RepeatedPrint("Goodbye", 2u); // prints "Hello" 2 times
     }
 
-    public void RepeatedPrint(string str, uint times) { // prints {str} {times} times 
+    public static void RepeatedPrint(string str, uint times) { // prints {str} {times} times 
         for(int i = 0; i < times; i++)
             System.Console.WriteLine(str);
     }
@@ -84,3 +87,77 @@ public class Program {
 ```
 
 ## Return Values
+
+In some cases, one may need a value from inside the method to be accessible to where the method was called, typically the result of some sort of operation or algorithm. We do this using a return statement, which terminates the function and sets the value to a following value. The syntax for this statement is `return {value};`. Note that in void, you can also just do `return;` if you need to conditionally, preliminarily terminate the method. It's also important that the return-type as mentioned above of the method is the type that you are returning. If a method is not `void`, there must be a return statement that will run in every case, and if it is void, there must be no value that follows any of the return statements.
+
+```cs
+public static void Main(string[] args) {
+    string Repeated = Repeat("Hello", 5u); // prints "Hello" 5 times
+    System.Console.WriteLine(@"""Hello"" 5 times = {0}", Repeated);
+}
+
+public static string Repeat(string str, uint times) { 
+    StringBuilder Result = new StringBuilder();
+
+    for(int i = 0; i < times; i++)
+        Result.Append(str);
+    return Result.ToString();
+}
+```
+
+### Recursion
+
+It's also worth noting that a method can call and use the return value of itself. This functions as it would as calling it from outside the method.
+
+```cs
+public static void Main(string[] args) {
+    int Fact = Factorial(6);
+    System.Console.WriteLine(@"6! = {0}", Fact);
+}
+
+public static int Factorial(int number) { 
+    return number == 0 ? 1 : number * Factorial(--number);        
+}
+```
+
+### Lambda Operator
+
+In cases where the only statement of a method is its return, it's typical to use a slightly different, more concise syntax. That syntax is `modifier type name(parameterList) => returnValue`. Everything except the body remains the same, while the body itself is changed from `{ return x; }` to just `=> x;`. 
+
+```cs
+public static void Main(string[] args) {
+    int Fact = Factorial(6);
+    System.Console.WriteLine(@"6! = {0}", Fact);
+}
+
+public static int Factorial(int number) => 
+    number == 0 ? 1 : number * Factorial(--number);
+```
+
+## Predefined
+
+
+### String Methods
+* string: **<string>.ToLower()** - Takes no parameters and returns <string> with all uppercase letters made lowercase
+* string: **<string>.ToUpper()** - Takes no parameters and returns <string> with all lowercase letters made uppercase
+* bool: **<string>.Contains()** - Takes a substring and returns true if the substring is inside <string>, otherwise returns false.
+* bool: **<string>.StartsWith()** - Takes a substring and returns true if <string> starts with the substring, otherwise returns false.
+* bool: **<string>.EndsWith()** - Takes a substring and returns true if <string> ends with the substring, otherwise returns false.
+* string: **<string>.Trim()** - Takes no parameters and returns <string> with all leading and trailing whitespace removed.
+* int: **<string>.IndexOf()** - Takes a substring and returns the index of where substring first appears the string. If it isn't in the string, returns -1.
+* int: **<string>.LastIndexOf()** - Takes a substring and returns the index of where substring last appears the string. If it isn't in the string, returns -1.
+* string: **<string>.Substring()** - Takes an int startIndex and returns everything from that index on OR takes an int startIndex and int length and returns {length} characters starting at the startIndex.
+* string[]: **<string>.Split()** - Takes a string seperator and returns a string array of <string> divided by said seperator. So `"1.2.3".Split(".")` is `new string[] {"1", "2", "3"}`
+* string: **string.Join()** - Takes a string seperator and does the reverse of spit. So `string.Join(".", new string[] {"1", "2", "3"})` is `"1.2.3"`. If the seperator is ",", it can be left out as it is implied.
+
+### Math
+
+* int: Math.Round() - Takes a double/float/decimal and returns it rounded.
+* int: Math.Floor() - Takes a double/float/decimal and returns it floored (rounded down).
+* int: Math.Ceiling() - Takes a double/float/decimal and returns it floored (rounded up).
+* decimal: Math.Sqrt() - Takes a number and returns it 
+* Math.Cbrt()
+* Math.Abs()
+* Math.Max()
+* Math.Min()
+* Math.Exp()
