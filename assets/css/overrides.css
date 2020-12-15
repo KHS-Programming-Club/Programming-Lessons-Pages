@@ -9,3 +9,7 @@ code {
 thead, tr, th {
   text-align: center!important;
 }
+
+b {
+  font-weight: 900;
+}
