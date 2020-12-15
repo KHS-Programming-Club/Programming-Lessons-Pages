@@ -152,12 +152,12 @@ public static int Factorial(int number) =>
 
 ### Math
 
-* int: Math.Round() - Takes a double/float/decimal and returns it rounded.
-* int: Math.Floor() - Takes a double/float/decimal and returns it floored (rounded down).
-* int: Math.Ceiling() - Takes a double/float/decimal and returns it floored (rounded up).
-* decimal: Math.Sqrt() - Takes a number and returns it 
-* Math.Cbrt()
-* Math.Abs()
-* Math.Max()
-* Math.Min()
-* Math.Exp()
+* int: **Math.Round()** - Takes a double/float/decimal and returns it rounded.
+* int: **Math.Floor()** - Takes a double/float/decimal and returns it floored (rounded down).
+* int: **Math.Ceiling()** - Takes a double/float/decimal and returns it floored (rounded up).
+* decimal: **Math.Sqrt()** - Takes a number and returns its square root.
+* decimal: **Math.Cbrt()** - Takes a number and returns its cube root.
+* {number}: **Math.Abs()** - Take a number and returns its absolute value ({number} as the type is determined by what you put as a parameter)
+* {number}: **Math.Max()** - Takes two numbers of the same type and returns the greater of the two ({number} as the type is determined by what you put as a parameter)
+* {number}: **Math.Min()** - Takes two numbers of the same type and returns the lesser of the two ({number} as the type is determined by what you put as a parameter)
+* double: **Math.Exp()** - Takes a number a returns euler's constant (e) raised to the power of said number
