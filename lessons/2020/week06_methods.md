@@ -1,4 +1,4 @@
-# Week 5: Methods
+# Week 6: Methods <!-- omit in toc -->
 
 **Table of Contents**
 - [What is a method?](#what-is-a-method)
@@ -10,9 +10,9 @@
 - [Return Values](#return-values)
   - [Recursion](#recursion)
   - [Lambda Operator](#lambda-operator)
-- [Predefined Methods](#predefined-methods)
+- [Predefined](#predefined)
   - [String Methods](#string-methods)
-  - [Math Methods](#math-methods)
+  - [Math](#math)
 
 ## What is a method?
   
