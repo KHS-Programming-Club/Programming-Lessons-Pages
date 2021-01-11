@@ -18,7 +18,7 @@
 - [Accessors and Mutators](#accessors-and-mutators)
 - [Polymorphism](#polymorphism)
 
-# What is a Class
+## What is a Class
 
 A class is an abstract representation of a thing or pattern. Like an object, it has things which are true for them, denoted with **properties**, and things which they have the pontential of doing, denoted with **methods**. **Objects** can be created, which are **instantiations** of the class, meaning that while a class is more abstract or representative, the object is a particular. A class is denoted with the keyword `class` (with a body) and is instatiated with the `new` keyword. Classes also must take the form of their own types (always reference types) which must be used in instantiation. This type is used to create a variable that stores the object.
 
@@ -32,7 +32,7 @@ class Program {
 }
 ```
 
-# Properties and Methods
+## Properties and Methods
 
 We covered methods in the previous week. Properties work very similarily to methods, except that instead of representing a function, they represent data (just like a variable). The only difference in terms of declaration is that they must have an access modifier, which we'll discuss later, but for now, we'll use `public`. The properties and methods of a class should be things which hold categorically true for that which the class is representing.
 
@@ -77,7 +77,7 @@ class Program {
 }
 ```
 
-## Optional Parameters
+### Optional Parameters
 
 Optional parameters are made by giving the parameter a default value that will be supplied if not supplied in the method call. This is done through putting an `=` and the default value beside the parameter's declaration.
 
@@ -99,7 +99,7 @@ class Program {
 }
 ```
 
-## This Keyword
+### This Keyword
 
 The `this` keyword is used to specify a variable or method within the same instance of a class it is used in:
 
@@ -113,7 +113,7 @@ public int getHours() {
 
 In this case `this` is not necessary because, as long as there are no local variables (or parameters) called `seconds`, C# will check the class for a property of that name. This comes in handy in the following section on constructors because there are frequently parameters with the same name as the properties.
 
-# Constructors
+## Constructors
 
 Constructors are special methods used to "set up" up an instance of a class when it is first created. For example, let's create an instance of the `TimePeriod` class:
 
@@ -136,7 +136,7 @@ class TimePeriod {
 
 A constructor must have the same name as the class and be set to `public` (more on this later).
 
-# Inheritance 
+## Inheritance 
 
 Inheritance is the means by which we apply information and functionality from one class to another. With inheritence, you have a superclass, which is the base class, and a subclass, which is the new class that's taking from the base class and adding on to it. Typically, the subclass will be a more specific to less specific.
 
@@ -165,7 +165,7 @@ class No2Pencil : Pencil {
 }
 ```
 
-## sealed
+### sealed
 
 The sealed keyword is applied to class to indicate that it cannot be inherited from.
 
@@ -174,7 +174,7 @@ class A {}
 class B : A {} // ERROR
 ```
 
-## Virtual and Override
+### Virtual and Override
 
 In order to override a member from a subclass, two keywords must be added. The first keyword that must be added is the **virtual** keyword in the superclass which indicated that the member can be overriden. The second is the **override** keyword on the subclass which indicates that it is actually being overridden.
 
@@ -202,7 +202,7 @@ class Program {
 }
 ```
 
-## abstract
+### abstract
 
 Abstract classes are the reverse of sealed classes. They can only be inherited from, but cannot themselves be instantiated. They also allow the class to contain abstract methods, which are methods that do not have a body and must have functionality given them in the subclass. 
 
@@ -227,7 +227,7 @@ class Program {
 }
 ```
 
-# Access Modifiers
+## Access Modifiers
 
 Access modifiers are used to set what parts of your program can access methods and/or properties
 
@@ -236,7 +236,7 @@ Access modifiers are used to set what parts of your program can access methods a
 * **protected:** Can be accessed by any code in the same class (ex: `protected int seconds`)
 * **internal:** Can be accessed by any code in the same assembly (ex: `internal int seconds`)
 
-## public
+### public
 
 ```cs
 using System;
@@ -257,7 +257,7 @@ class Program {
 }
 ```
 
-## private
+### private
 
 If we try the same example again with color being declared as `private`, it will not work because Main is not in the same class as the color property.
 
@@ -282,7 +282,7 @@ class Program {
 
 *Instead an accessor can be used, see [Accessors and Mutators](#accessors-and-mutators).*
 
-## protected
+### protected
 
 This is very similar to `private`, but derived classes can also access the properties.
 
@@ -311,12 +311,12 @@ class Program {
 }
 ```
 
-## internal
+### internal
 
 This is virtually identical to public until you get into more advanced and larger projects.
 
 *note: an assembly is a grouping of one or more files created during **compilation**, we haven't talked about these yet*
-# Accessors and Mutators 
+## Accessors and Mutators 
 
 It can be very useful to have control over how a property is read from or updated. This can be done with `get` and `set`, and C# provides and excellent way to use these; essentially allowing us to write methods while still having the convenience of a property.
 
@@ -345,7 +345,7 @@ class Program {
 
 The `value` keyword is used to represent the new value, in this case `24` from `t.hours = 24`.
 
-# Polymorphism
+## Polymorphism
 
 Polymorphism has two main aspects:
 
