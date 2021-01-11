@@ -1,0 +1,20 @@
+Makings our own classes:
+ - Properties
+ - Methods
+ - Parameters and arguments
+   - Optional parameters
+   - Named parameters
+ - return and =>
+ - Constructors
+ - Access modifiers
+   - public
+   - private
+   - protected
+   - internal
+ - Accessors and Mutators
+ - Inheritance
+   - sealed
+   - virtual
+   - abstract
+   - override
+ - Polymorphism
