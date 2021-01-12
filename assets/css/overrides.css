@@ -12,4 +12,9 @@ thead, tr, th {
 
 b, strong {
   font-weight: 900;
+  color: papayawhip;
+}
+
+p {
+  color: rgb(233,245,255);
 }
