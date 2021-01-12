@@ -262,7 +262,7 @@ class Program {
 Access modifiers are used to set what parts of your program can access methods and/or properties
 
 * **public:** Can be accessed by any other code (ex: `public int seconds`)
-* **private:** Can be accessed by any code in the same class or struct (ex: `private int seconds`)
+* **private:** Can be accessed by any code in the same class (ex: `private int seconds`)
 * **protected:** Can be accessed by any code in the same class (ex: `protected int seconds`)
 * **internal:** Can be accessed by any code in the same assembly (ex: `internal int seconds`)
 
