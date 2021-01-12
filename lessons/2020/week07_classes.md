@@ -20,7 +20,7 @@
 
 ## What is a Class
 
-A class is an abstract representation of a thing or pattern. Like an object, it has things which are true for them, denoted with **properties**, and things which they have the pontential of doing, denoted with **methods**. **Objects** can be created, which are **instantiations** of the class, meaning that while a class is more abstract or representative, the object is a particular. A class is denoted with the keyword `class` (with a body) and is instatiated with the `new` keyword. Classes also must take the form of their own types (always reference types) which must be used in instantiation. This type is used to create a variable that stores the object.
+A class is an abstract representation of a thing or pattern. It has things which are true for them, denoted with **properties**, and things which they have the pontential of doing, denoted with **methods**. **Objects** can be created, which are **instantiations** of the class, meaning that while a class is more abstract or representative, the object is a particular. A class is denoted with the keyword `class` (with a body) and is instatiated with the `new` keyword. Classes also must take the form of their own types (always reference types) which must be used in instantiation. This type is used to create a variable that stores the object.
 
 ```cs
 class Dog {}
