@@ -101,17 +101,29 @@ class Program {
 
 ### This Keyword
 
-The `this` keyword is used to specify a variable or method within the same instance of a class it is used in:
-
-For example, in the the following method, `this` is to access the seconds property in the same class.
+There are two levels which the compiler will look when accessing a variable:
+1. The **class-level** - Properties
+2. The **method level** - Parameters and normal variables
+In cases where there is a variable is in both of these levels, it will prioritize whatever is in the method-level. In such cases where you need to look into the class-level, you can still access the variable on the class-level using the **this** keyword. The this keyword tells the compiler to only look on the class level and the syntax is `this.VariableName`.
 
 ```cs
-public int getHours() {
-  return this.seconds / 3600;
+using System;
+
+class Dog {
+  public int AverageSpeed = 3;
+
+  public void Walk() => 
+    Move(this.AverageSpeed);
+
+  public void Run() {
+    int AverageSpeed = 20;
+    Move(AverageSpeed);
+  }
+  
+  public void Move(int AverageSpeed) =>
+    Console.WriteLine("Dog moving at an average speed of: {0} mph", AverageSpeed);
 }
 ```
-
-In this case `this` is not necessary because, as long as there are no local variables (or parameters) called `seconds`, C# will check the class for a property of that name. This comes in handy in the following section on constructors because there are frequently parameters with the same name as the properties.
 
 ## Constructors
 
