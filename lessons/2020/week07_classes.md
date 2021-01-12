@@ -112,23 +112,32 @@ using System;
 
 class Dog {
   public int AverageSpeed = 3;
-
-  public void Walk() => 
-    Move(this.AverageSpeed);
+  public bool CannotRun = false;
 
   public void Run() {
     int AverageSpeed = 20;
-    Move(AverageSpeed);
+    
+    if(CannotRun)
+      Move(this.AverageSpeed);
+    else
+      Move(AverageSpeed);
   }
   
   public void Move(int AverageSpeed) =>
-    Console.WriteLine("Dog moving at an average speed of: {0} mph", AverageSpeed);
+    Console.WriteLine(@"Dog moving at an average speed of: {0} mph
+    Average walking speed: {1}", AverageSpeed, this.AverageSpeed);
+
+  public void ChangeSpeed(int AverageSpeed) {
+    this.AverageSpeed = AverageSpeed;
+  }
 }
 
 class Program {
   public static void Main (string[] args) {
     Dog dog = new Dog();
-    dog.Walk();
+    dog.Run();
+    dog.ChangeSpeed(4);
+    dog.CannotRun = true;
     dog.Run();
   }
 }
