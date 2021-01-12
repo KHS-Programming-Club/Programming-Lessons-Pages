@@ -92,7 +92,7 @@ class Pen {
 class Program {
   public static void Main() {
     Pen pen = new Pen();
-    pen.name = "John";
+    pen.owner = "John";
     pen.Write("Hello");
     pen.Write("Revenge", "Red");
   }
