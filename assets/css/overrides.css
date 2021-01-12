@@ -18,3 +18,7 @@ b, strong {
 p {
   color: rgb(233,245,255);
 }
+
+p:first-of-type > strong {
+  color: #FFF;
+}
