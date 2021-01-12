@@ -104,6 +104,7 @@ class Program {
 There are two levels which the compiler will look when accessing a variable:
 1. The **class-level** - Properties
 2. The **method level** - Parameters and normal variables
+
 In cases where there is a variable is in both of these levels, it will prioritize whatever is in the method-level. In such cases where you need to look into the class-level, you can still access the variable on the class-level using the **this** keyword. The this keyword tells the compiler to only look on the class level and the syntax is `this.VariableName`.
 
 ```cs
