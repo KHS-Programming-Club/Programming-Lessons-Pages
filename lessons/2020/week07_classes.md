@@ -124,6 +124,14 @@ class Dog {
   public void Move(int AverageSpeed) =>
     Console.WriteLine("Dog moving at an average speed of: {0} mph", AverageSpeed);
 }
+
+class Program {
+  public static void Main (string[] args) {
+    Dog dog = new Dog();
+    dog.Walk();
+    dog.Run();
+  }
+}
 ```
 
 ## Constructors
