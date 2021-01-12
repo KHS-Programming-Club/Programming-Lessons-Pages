@@ -376,6 +376,8 @@ Polymorphism has two main aspects:
 This is much easier to see in an example. First, let's define some classes:
 
 ```cs
+using System;
+
 public class Shape {
   public int width;
   public int height;
@@ -401,18 +403,22 @@ public class Rectangle : Shape {
 Now applying these classes to a polymorphism example:
 
 ```cs
-// Example 1: Ractangle and Cricle can both be used where a shape is expected.
-List<Shape> shapes = new List<Shape> {
-  new Rectangle(),
-  new Circle()
-};
+class Program {
+  // Example 1: Ractangle and Cricle can both be used where a shape is expected.
+  public static void Main() {
+    Shape[] Shapes = {
+      new Rectangle(),
+      new Circle()
+    };
 
-// Example 2: the overriden draw method is called, rather than the base class
-foreach (Shape shape in shapes) {
-  shape.Draw();
+    // Example 2: the overriden draw method is called, rather than the base class
+    foreach (Shape Shape in Shapes)
+      Shape.Draw();
+
+    /* Output:
+      Drawing a rectangle
+      Drawing a circle
+    */
+  }
 }
-/* Output:
-  Drawing a rectangle
-  Drawing a circle
-*/
 ```
