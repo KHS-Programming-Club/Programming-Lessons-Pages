@@ -391,7 +391,7 @@ public class Circle : Shape {
   }
 }
 
-public Class Rectangle : Shape {
+public class Rectangle : Shape {
   public override void Draw() {
     Console.WriteLine("Drawing a rectangle");
   }
