@@ -39,9 +39,9 @@ We covered methods in the previous week. Properties work very similarily to meth
 Property examples:
 ```cs
 class TimePeriod {
-  public int hours;
-  public int minutes;
-  public int seconds;
+  public int Hours;
+  public int Minutes;
+  public int Seconds;
 }
 ```
 
@@ -49,20 +49,20 @@ Method examples:
 ```cs
 class TimePeriod {
   // converts the seconds to hours and returns an int
-  public int getHours() {
-    return seconds / 3600;
+  public int GetHours() {
+    return Seconds / 3600;
   }
 }
 ```
 
 ```cs
 class Dog {
-  public String color;
-  public void makeNoise(String noise) {
+  public String Color;
+  public void MakeNoise(String noise) {
     System.Console.WriteLine($"The {color} dog says {noise}");
   }
 
-  public void bark() {
+  public void Bark() {
     makeNoise("Woof");
   }
 }
@@ -70,9 +70,9 @@ class Dog {
 class Program {
   public static void Main() {
     Dog dog = new Dog();
-    dog.color = "Brown";
-    dog.bark();
-    dog.makeNoise("Growl");
+    dog.Color = "brown";
+    dog.Bark();
+    dog.MakeNoise("Growl");
   }
 }
 ```
@@ -83,16 +83,16 @@ Optional parameters are made by giving the parameter a default value that will b
 
 ```cs
 class Pen {
-  public String owner;
+  public String Owner;
   public void Write(String contents, String color = "black") {
-    System.Console.WriteLine("{0} has written {1} in {2} ink", owner, contents, color);
+    System.Console.WriteLine("{0} has written {1} in {2} ink", Owner, contents, color);
   }
 }
 
 class Program {
   public static void Main() {
     Pen pen = new Pen();
-    pen.owner = "John";
+    pen.Owner = "John";
     pen.Write("Hello");
     pen.Write("Revenge", "Red");
   }
@@ -148,7 +148,7 @@ class Program {
 Constructors are special methods used to "set up" up an instance of a class when it is first created. For example, let's create an instance of the `TimePeriod` class:
 
 ```cs
-TimePeriod lunch = new TimePeriod(1800);
+TimePeriod Lunch = new TimePeriod(1800);
 ```
 
 The constructor is run when this is created and, in this case, it takes a parameter of the number of seconds that will be stored in the seconds property. Here's what the TimePeriod class looks like:
@@ -172,8 +172,8 @@ Inheritance is the means by which we apply information and functionality from on
 
 ```cs
 class Utensil {
-  public String color;
-  public String owner;
+  public String Color;
+  public String Owner;
 
   public void Write(String contents) {
     System.Console.WriteLine(contents);
@@ -181,7 +181,7 @@ class Utensil {
 }
 
 class Pencil : Utensil {
-  public String color = "Grey";
+  public String Color = "Grey";
   
   public void Erase() {
     System.Console.WriteLine("Contents have been erased");
@@ -249,10 +249,10 @@ class HelloSayer {
 
 class Program {
   public static void Main() {
-    HelloSayer hello = new HelloSayer();
-    hello.Greet();
+    HelloSayer Hello = new HelloSayer();
+    Hello.Greet();
 
-    Gretter greeter = new Greeter(); // Error
+    Gretter Greet = new Greeter(); // Error
   }
 }
 ```
