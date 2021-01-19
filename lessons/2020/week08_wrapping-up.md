@@ -69,6 +69,24 @@ class Program() {
 }
 ```
 
+## ToString
+
+Each class has an overridable method called to ToString. This is the string representation of the class, which by default is just the class name. You can override it with `public override string ToString() { ... }`.
+
+```cs
+class Person {
+  private string Name;
+  
+  public Person(string Name) {
+    this.Name = Name;
+  }
+  
+  public override string ToString() {
+    return Name;
+  }
+}
+```
+
 ## Intefaces
 
 Interfaces are a form of object that can be seen as a completely abstract class. They cannot have their own instantiation and all properties and methods are abstract. They are  used to create a blueprint for classes of a particular characteristic. Their syntax in creation is the same as a normal class, except instead of the `class` keyword, we use the `interface` keyword. They are **implemented** using the same syntax as inheritence i.e. with a colon. Unlike with inheritence, you may implement multiple interfaces, seperating the class names with commas. If you are to implement an interface and extend a parent class onto the same child class, you do as you would with multiple implementation and put the parent class at the beginning of the list.
