@@ -1,6 +1,7 @@
-# Week 8: Wrapping Up <!-- omit in toc -->
+# Week 8: More on Objects <!-- omit in toc -->
 
 **Table of Contents**
+- [Static](#static)
 - [Destructor](#destructor)
 - [Intefaces](#intefaces)
 - [Enums](#enums)
@@ -26,7 +27,7 @@ class User {
 }
 
 class Program() {
-  public static void Main() {
+  public static void Main(string[] args) {
     string[] Names = {"Linus", "Roberta", "Kyle", "Surayya", "Nina", "Terri", "Layton"};
     User[] Users = new User[Names.Length];
     
@@ -61,7 +62,7 @@ class Computer {
 }
 
 class Program() {
-  public static void Main() {
+  public static void Main(string[] args) {
     Computer computer = new Computer(); // Power on
     computer.Print("Hello, World!"); // Printing "Hello, World!"...
   } // Power off
@@ -103,6 +104,57 @@ class LoginField : Authentication, Login, Field {
 
 ## Enums
 
+Enums are a type of object which denote a group of possibilities as constants within a specific category. This type of object does not take properties nor methods, but they do take instantiations in their own way. The enum itself acts as the type while the data inside the enum act as the value for a variable. The syntax for an enum is `enum Name { COMMA_SEPERATED_LIST };`. The values themselves are access through `Name.LIST_ITEM`.
+
+```cs
+using System;
+
+enum Direction { UP, DOWN, LEFT, RIGHT, STOPPED };
+
+class Player {
+  Direction dir;
+  
+  public Player() {
+    dir = Console.ReadKey().Key switch {
+      ConsoleKey.W => Direction.UP,
+      ConsoleKey.A => Direction.LEFT,
+      ConsoleKey.S => Direction.DOWN,
+      ConsoleKey.D => Direction.RIGHT,
+      _ => Direction.STOPPED
+    };
+  }
+}
+
+class Enemy {
+  Direction dir = Direction.LEFT;
+}
+```
+
+```
+enum Months { JANUARY, FEBUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER };
+```
+
+Enums values also have their own indeces. By default, it's just like an array: 0, 1, 2 etc. You can override values by putting an equals sign and an overriden index next to it. Without an override, values will always be one above the previous item, even if the previous item was overriden. Indeces can be accessed through casting.
+
+```cs
+enum WeekDaysInTheMonth {
+  SUNDAY = 29,
+  MONDAY, // 30
+  TUESDAY, // 31
+  WEDNESDAY = 1,
+  THURSDAY, // 2
+  FRIDAY, // 3
+  SATURDAY // 4
+};
+
+class Program {
+  public static void Main(string[] args) {
+    System.Console.WriteLine((int) WeekDaysInTheMonth.THURSDAY);
+    System.Console.WriteLine((WeekDaysInTheMonth) 30);
+  }
+}
+```
+
 ## Method Overloading
 
 Method overloading is when two distinct methods of the same name are distinguished via their parameter types. Which method is called is determined by the data that is put into it.
@@ -129,7 +181,7 @@ class Analysis {
 }
 
 class Program {
-  public static void Main() {
+  public static void Main(string[] args) {
     Analysis Analysizer = new Analysis();
   
     Analysizer.Compare("Test", "Test", "Not Test"); // Method #1 has been called
@@ -140,7 +192,7 @@ class Program {
 
 ## Operator Overloading
 
-Throughout the previous lessons, we've learn many operators which can be applied to various data-types. Within our classes, we can create special methods which determine the result of an operation from class to class.
+Throughout the previous lessons, we've learn many operators which can be applied to various data-types. Within our classes, we can create special methods which determine the result of an operation from class to class. The syntax for creating one of these methods is `public static RETURN_TYPE operator OPERATOR(INPUT_1_TYPE INPUT_1_NAME, INPUT_2_TYPE INPUT_2_NAME) { ... }` inside the appropriate class. Then, you can perform the operation as though your class was a predefined type.
 
 ```cs
 class Person {
