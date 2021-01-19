@@ -3,6 +3,7 @@
 **Table of Contents**
 - [Static](#static)
 - [Destructor](#destructor)
+- [ToString](#tostring)
 - [Intefaces](#intefaces)
 - [Enums](#enums)
 - [Method Overloading](#method-overloading)
