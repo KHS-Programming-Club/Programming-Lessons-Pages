@@ -238,3 +238,45 @@ class Program {
 
 ## Structs
 
+Structs are another type of object very similar to classes. Their biggest divergences are that
+1. they are stored as a value-type rather than a reference-type
+2. They do not support inheritence.
+3. Once the are declared, it is instantiated, even if there is no definition
+4. All properties are given a default value (following the same rules as array-contents) if the struct itself is manually instantiated
+5. It takes a semicolon
+6. It cannot have a default constructor
+
+Structs work well when representing a thing and when representing something very simple. The entirety of a struct, conceptually, should revolve around its properties. Structs also differ from classes in that they may not have a default constructor. 
+
+```cs
+struct Books {
+   public string title;
+   public string author;
+   public string genre;
+   public int isbn;
+};
+```
+
+```cs
+struct Coordinates {
+  public int x;
+  public int y;
+  public int z;
+}
+
+class Program {
+  public static void Main(string[] args) {
+    Coordinates origin = new Coordinates();
+    System.Console.WriteLine(origin.x); // 0
+
+    Coordinates origin2;
+    System.Console.WriteLine(origin2.x); // Error
+
+    Coordinates point3;
+    point3.x = 4;
+    point3.y = 12;
+    point3.z = -1;
+    System.Console.WriteLine(point3.x); // 4
+  }
+}
+```
