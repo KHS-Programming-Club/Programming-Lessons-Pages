@@ -182,7 +182,7 @@ Method overloading is when two distinct methods of the same name are distinguish
 
 ```cs
 class Analysis {
-  public int Compare(String a, String b, String c) {
+  public int Compare(string a, string b, string c) {
     System.Console.WriteLine("Method #1 has been called");
   
     int matches = 0;
