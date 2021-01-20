@@ -205,8 +205,8 @@ class Program {
   public static void Main(string[] args) {
     Analysis Analysizer = new Analysis();
   
-    Analysizer.Compare("Test", "Test", "Not Test"); // Method #1 has been called
-    Analysizer.Compare(5, 2, 7); // Method #2 has been called
+    int StrExample = Analysizer.Compare("Test", "Test", "Not Test"); // Method #1 has been called
+    int IntExample = Analysizer.Compare(5, 2, 7); // Method #2 has been called
   }
 }
 ```
