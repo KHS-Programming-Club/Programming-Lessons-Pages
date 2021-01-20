@@ -189,7 +189,7 @@ class Analysis {
     bool[] Comparisons = {a == b, a == c, b == c};
     
     foreach(bool Comparison in Comparisons)
-      matches++;
+      matches += Comparison ? 1 : 0;
     
     return matches;
   }
