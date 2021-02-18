@@ -14,7 +14,7 @@ Depending on your editor, you may have seen `namespace {whatever you named the p
 ```cs
 namespace CreativeProgramName { // Groups the program class in with the name of the program, signifying that it's fundamental to the program
     class Program { // Class with contains the Main method and potential data which the method will use 
-        static void Main() { // Starting point of the program, runs immediately once the program is executed
+        public static void Main() { // Starting point of the program, runs immediately once the program is executed
             // All code we write will be in the place of this comment
             // Also note the lack of the "return 0;"
         } // Tells the program that there is nothing else inside the Main method
