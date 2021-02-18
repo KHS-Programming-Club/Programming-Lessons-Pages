@@ -64,7 +64,7 @@ int main() {
 
 **Signed** - this type of variable can store a positive or negative number, but has a slightly reduced range available.
 
-**Unsigned** - this has a higher range, but can only store positive values.
+**Unsigned** - this has a higher range, but can only store nonnegative values.
 
 Numerical types are signed by default, but can also be unsigned with the modifier `signed`.
 
