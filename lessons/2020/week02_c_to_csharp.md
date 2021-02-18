@@ -27,14 +27,14 @@ namespace CreativeProgramName { // Groups the program class in with the name of 
 * Unlike printf, this automatically puts the `\n`
 * Instead of using symbols such as %s or %d, you can put `{0}`, `{1}`, `{2}` into the string (nothing changes with types)
   * Each number corresponds to the order in which it’s put in the function, {1} can come before {0} in the template
-* Allows you to directly put a string variable into the function
+* Allows you to directly put a string variable or non-string into the function
 
 **System.Console.Write** - The exact same as System.Console.WriteLine except it does not automatically put the `\n` at the end
 
 **Exampe 1**
 ```cs
 class Program {
-    static void Main() {
+    public static void Main() {
         System.Console.Write("Hello!");
         System.Console.WriteLine("Hi");
         System.Console.WriteLine("Bye");
@@ -62,7 +62,7 @@ If you type `using System;` at the top of the program, whenever something is mar
 using System;
 
 class Program {
-    static void Main() {
+    public static void Main() {
         Console.WriteLine("Hello, World!");
     }
 }
