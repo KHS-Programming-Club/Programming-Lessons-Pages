@@ -87,9 +87,9 @@ You can also have a `long long` int, which has double the number of bits as a lo
 
 ### Overflow and Underflow
 
-If a variable goes over the maximum or undr the  minimum value for its data type, it will go around to the other end of the range.
+If a variable goes over the maximum or under the minimum value for its data type, it will go around to the other end of the range.
 
-```
+```c
 int overflow_example = 2147483647 + 1; // this will be -2147483648
 ```
 
