@@ -26,7 +26,7 @@ int count = 5;
 There are several basic types:
 * Integer (`int`) - exactly what it says, integer (number with no decimal places)
 * Boolean (`_Bool` or `bool`) - can be `true` or`false` (1 or 0)
-* Character (`char`) - stores a single character of text (in number form, [see here](https://en.wikipedia.org/wiki/ASCII))
+* Character (`char`) - stores a single character of text, defined with that character in single quotes (') (or in number form, [see here](https://en.wikipedia.org/wiki/ASCII))
 * Float (`float`) - number with up to 7 decimal places
 * Double (`double`) - number with up to 14 decimal places (*double* that of a float)
 * Void (`void`) - literally nothing (has no value)
