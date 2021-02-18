@@ -1,10 +1,3 @@
-<header>
-    <div style="width: 100%; text-align: right; position: relative; margin-top: -10px;">
-        <img src="../../assets/images/blacktocat.png" style="position:relative;top:3px;" />
-        <a href="https://github.com/KHS-Programming-Club/khs-programming-club.github.io" target="_blank" style="padding-right: 20px;">View GitHub</a>
-    </div>
-</header>
-
 # Welcome to Programming Club
 
 Below is a list of pages on the site; more will be added shortly
