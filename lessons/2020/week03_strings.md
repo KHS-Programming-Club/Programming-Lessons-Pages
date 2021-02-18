@@ -178,7 +178,7 @@ int age = System.Convert.ToInt32(System.Console.ReadLine());
 System.Console.Write("How many days until your birthday? ");
 int days = System.Convert.ToInt32(System.Console.ReadLine());
  
-System.Console.WriteLine($"{name} will be {age} in {days} days. This is equal to {days / 30} * 30 + {days % 30} days til {name}'s birthday.");
+System.Console.WriteLine($"{name} will be {age + 1} in {days} days. This is equal to {days / 30} * 30 + {days % 30} days til {name}'s birthday.");
 ```
 
 ## StringBuilder Class
