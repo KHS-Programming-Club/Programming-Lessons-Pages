@@ -218,9 +218,9 @@ System.Console.WriteLine(builder.ToString()); // Default? Not anymore! 3 + 4 = 7
 Each character of a string has an index, which represents it’s position in the string starting at `0`. For example, the `'e'` in `"Hello"` has an index of `1`. The insert method inserts a string starting at a supplied index with the syntax `variableName.Insert(index, stringToInsert).`
 
 ```cs
-System.Text.StringBuilder builder = new System.Text.StringBuilder("Hello!");
+System.Text.StringBuilder builder = new System.Text.StringBuilder("Hello!!");
 builder.Insert(5, ", world");
-System.Console.WriteLine(builder.ToString()); // Hello, world!
+System.Console.WriteLine(builder.ToString()); // Hello, world!!
 ```
 
 **Remove**
