@@ -85,14 +85,6 @@ long int c = 9223372036854775807; // Max value of a long int
 
 You can also have a `long long` int, which has double the number of bits as a long int.
 
-### Overflow and Underflow
-
-If a variable goes over the maximum or under the minimum value for its data type, it will go around to the other end of the range.
-
-```c
-int overflow_example = 2147483647 + 1; // this will be -2147483648
-```
-
 ## Operators
 
 Now that we have variables, we can do some math with them. Here's a list of operators
@@ -114,6 +106,14 @@ int remainder = 40 % 3; // 1
 C follows order of operations, so you are able to string a few calculations together:
 ```c
 int sum = 5 + 6 / 3 - 2; // 5
+```
+
+### Overflow and Underflow
+
+If a variable goes over the maximum or under the minimum value for its data type, it will go around to the other end of the range.
+
+```c
+int overflow_example = 2147483647 + 1; // this will be -2147483648
 ```
 
 ### Truncation
